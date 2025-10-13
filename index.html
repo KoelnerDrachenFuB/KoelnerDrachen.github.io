@@ -22,7 +22,7 @@
         button { background-color: #006400; color: white; padding: 10px; border: none; cursor: pointer; }
         footer { background-color: #006400; color: white; text-align: center; padding: 10px; }
         #logo { width: 100px; height: auto; margin: 10px auto; display: block; }
-        .herren-link { color: #006400; text-decoration: underline; cursor: pointer; }
+        .herren-link, .frauen-link { color: #006400; text-decoration: underline; cursor: pointer; }
         .kader { display: none; margin-top: 10px; }
         .kader ul { list-style: none; padding: 0; }
         .kader li { margin: 5px 0; }
@@ -70,7 +70,7 @@
     <section id="mannschaften">
         <h2>Unsere Mannschaften</h2>
         <ul>
-            <li><span class="herren-link" onclick="toggleKader()">1. Herrenmannschaft:</span> 2. Bundesliga – Trainer: Marijo Mandžukić
+            <li><span class="herren-link" onclick="toggleKader('herren')">1. Herrenmannschaft:</span> 2. Bundesliga – Trainer: Marijo Mandžukić
                 <div id="herrenKader" class="kader">
                     <ul>
                         <li>1. Christian Schmidt 🇩🇪</li>
@@ -116,7 +116,35 @@
                     </ul>
                 </div>
             </li>
-            <li><strong>1. Frauenmannschaft:</strong> 1. Bundesliga – Trainer: Daris Jean-Baptiste</li>
+            <li><span class="frauen-link" onclick="toggleKader('frauen')">1. Frauenmannschaft:</span> 1. Bundesliga – Trainer: Daris Jean-Baptiste
+                <div id="frauenKader" class="kader">
+                    <ul>
+                        <li>1. Zita Meier 🇩🇪</li>
+                        <li>2. Annaliese Jung 🇩🇪</li>
+                        <li>3. Ajda Oman 🇸🇮</li>
+                        <li>4. Ulla Fischer 🇩🇪</li>
+                        <li>5. Liane König 🇩🇪</li>
+                        <li>6. Māra Lukovs 🇱🇻</li>
+                        <li>7. Franziska Neumann 🇩🇪</li>
+                        <li>8. Luise Lehmann 🇩🇪</li>
+                        <li>9. Frieda Thomas 🇩🇪</li>
+                        <li>10. Elisa Müller 🇨🇭</li>
+                        <li>11. Tabea Bender 🇩🇪</li>
+                        <li>12. Lisa Siegmund 🇩🇪</li>
+                        <li>13. Liesel Schröder 🇩🇪</li>
+                        <li>14. Villborg Hjalmytysdottir 🇮🇸</li>
+                        <li>15. Gretchen Schuster 🇩🇪</li>
+                        <li>16. Valentina Meyer 🇩🇪</li>
+                        <li>17. Agnes Varga 🇭🇺</li>
+                        <li>18. Yasmine Mayer 🇩🇪</li>
+                        <li>19. Liesel Zimmermann 🇩🇪</li>
+                        <li>20. Natascha Neumann 🇩🇪</li>
+                        <li>21. Roswitha Strasser 🇦🇹</li>
+                        <li>22. Sarah Vogt 🇩🇪</li>
+                        <li>23. Amalia Kaiser 🇩🇪</li>
+                    </ul>
+                </div>
+            </li>
         </ul>
         <p>Interessiert? Schreib uns für ein Probetraining!</p>
     </section>
@@ -177,12 +205,23 @@
     </footer>
 
     <script>
-        function toggleKader() {
-            const kader = document.getElementById('herrenKader');
-            if (kader.style.display === 'block') {
-                kader.style.display = 'none';
-            } else {
-                kader.style.display = 'block';
+        function toggleKader(team) {
+            const kaderHerren = document.getElementById('herrenKader');
+            const kaderFrauen = document.getElementById('frauenKader');
+            if (team === 'herren') {
+                if (kaderHerren.style.display === 'block') {
+                    kaderHerren.style.display = 'none';
+                } else {
+                    kaderHerren.style.display = 'block';
+                    kaderFrauen.style.display = 'none'; // Schließe das andere
+                }
+            } else if (team === 'frauen') {
+                if (kaderFrauen.style.display === 'block') {
+                    kaderFrauen.style.display = 'none';
+                } else {
+                    kaderFrauen.style.display = 'block';
+                    kaderHerren.style.display = 'none'; // Schließe das andere
+                }
             }
         }
     </script>
