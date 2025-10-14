@@ -17,15 +17,13 @@
         table { width: 100%; border-collapse: collapse; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background-color: #006400; color: white; }
-        form { max-width: 400px; }
-        input, textarea { width: 100%; padding: 8px; margin: 5px 0; }
-        button { background-color: #006400; color: white; padding: 10px; border: none; cursor: pointer; }
         footer { background-color: #006400; color: white; text-align: center; padding: 10px; }
         #logo { width: 100px; height: auto; margin: 10px auto; display: block; }
         .herren-link, .frauen-link { color: #006400; text-decoration: underline; cursor: pointer; }
         .kader { display: none; margin-top: 10px; }
         .kader ul { list-style: none; padding: 0; }
         .kader li { margin: 5px 0; }
+        .news-link { color: #006400; text-decoration: underline; cursor: pointer; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -39,7 +37,6 @@
                 <li><a href="#ueber-uns">Über uns</a></li>
                 <li><a href="#mannschaften">Mannschaften</a></li>
                 <li><a href="#spielplan">Spielplan</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -48,17 +45,7 @@
         <h2>Willkommen bei den Kölner Drachen!</h2>
         <p>Der Fußballverein Kölner Drachen aus Köln steht für Leidenschaft, Fairness und Gemeinschaft. Seit 1994 erobern wir den Rasen mit Drachenflügeln. Werde Teil unserer Familie und erlebe den Spirit mit uns!</p>
         <h3>Aktuelle News</h3>
-        <h4>Herrenmannschaft</h4>
-        <ul>
-            <li>01.07.2025 - Kölner Drachen lehnen Vorbereitungsturnier ab</li>
-            <li>21.07.2025 - Marijo Mandžukić übernimmt das Traineramt bei den Kölner Drachen</li>
-            <li>27.07.2025 - Kölner Drachen treffen im DFB-Pokal auf Arminia Bielefeld</li>
-            <li>27.07.2025 - Spielplan bis 26. Oktober 2025 festgelegt</li>
-        </ul>
-        <h4>Frauenmannschaft</h4>
-        <ul>
-            <li>Aktuell keine News verfügbar</li>
-        </ul>
+        <p>Klicke hier, um die neuesten Entwicklungen zu erfahren: <a href="news.html" class="news-link">Zum News-Bereich</a>.</p>
     </section>
 
     <section id="ueber-uns">
@@ -152,7 +139,7 @@
                 </div>
             </li>
         </ul>
-        <p>Interessiert? Schreib uns für ein Probetraining!</p>
+        <p>Interessiert? Besuche uns auf unserem Trainingsort oder folge uns auf Instagram!</p>
     </section>
 
     <section id="spielplan">
@@ -342,19 +329,6 @@
                 </tr>
             </tbody>
         </table>
-    </section>
-
-    <section id="kontakt">
-        <h2>Kontakt</h2>
-        <p><strong>Adresse:</strong> Willy-Brandt-Platz 3, 50679 Köln-Deutz, Deutschland</p>
-        <p><strong>Social Media:</strong> <a href="https://www.instagram.com/koelnerdrachen_fub">Instagram</a></p>
-        <h3>Kontaktformular</h3>
-        <form action="#" method="post">
-            <input type="text" name="name" placeholder="Dein Name" required>
-            <input type="email" name="email" placeholder="Deine E-Mail" required>
-            <textarea name="message" placeholder="Deine Nachricht" rows="5" required></textarea>
-            <button type="submit">Absenden</button>
-        </form>
     </section>
 
     <footer>
