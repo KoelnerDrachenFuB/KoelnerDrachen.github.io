@@ -14,15 +14,14 @@
         nav ul li { display: inline; margin: 0 15px; }
         nav ul li a { color: white; text-decoration: none; }
         section { padding: 20px; margin: 10px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        table { width: 100%; border-collapse: collapse; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #006400; color: white; }
+        th { background-color: #006400; color: white; cursor: pointer; }
+        th:hover { background-color: #004d00; }
+        .filter-section { margin-bottom: 10px; }
+        .filter-section select, .filter-section input { padding: 5px; margin-right: 10px; }
         footer { background-color: #006400; color: white; text-align: center; padding: 10px; }
         #logo { width: 100px; height: auto; margin: 10px auto; display: block; }
-        .herren-link, .frauen-link { color: #006400; text-decoration: underline; cursor: pointer; }
-        .kader { display: none; margin-top: 10px; }
-        .kader ul { list-style: none; padding: 0; }
-        .kader li { margin: 5px 0; }
         .news-link { color: #006400; text-decoration: underline; cursor: pointer; font-weight: bold; }
     </style>
 </head>
@@ -63,271 +62,197 @@
 
     <section id="mannschaften">
         <h2>Unsere Mannschaften</h2>
-        <ul>
-            <li><span class="herren-link" onclick="toggleKader('herren')">1. Herrenmannschaft:</span> 2. Bundesliga – Trainer: Marijo Mandžukić
-                <div id="herrenKader" class="kader">
-                    <ul>
-                        <li>1. Christian Schmidt 🇩🇪</li>
-                        <li>2. Dennis Seimen 🇩🇪</li>
-                        <li>3. Niels Simon 🇩🇪</li>
-                        <li>4. Jonas Schmitz 🇩🇪</li>
-                        <li>5. Giorgio Scalvini 🇮🇹</li>
-                        <li>6. Fabian Friedrich 🇩🇪</li>
-                        <li>7. Rayan Cherki 🇫🇷</li>
-                        <li>8. Antonio Nusa 🇳🇴</li>
-                        <li>9. Emil Weber 🇩🇪</li>
-                        <li>10. Andre Keller 🇩🇪</li>
-                        <li>11. Leo Graf 🇩🇪</li>
-                        <li>12. Marco Wagner 🇩🇪</li>
-                        <li>13. Jona Arnold 🇩🇪</li>
-                        <li>14. Oier Ramirez 🇪🇸</li>
-                        <li>15. Johann Jung 🇩🇪</li>
-                        <li>16. Elis Schäfer 🇩🇪</li>
-                        <li>17. Linus Frank 🇩🇪</li>
-                        <li>18. Jan Zimmermann 🇩🇪</li>
-                        <li>19. Patrik Bengtsson 🇸🇪</li>
-                        <li>20. Jörg Fontana 🇨🇭</li>
-                        <li>21. Enis Slilhovic 🇧🇦</li>
-                        <li>22. Yolan Lang 🇨🇭</li>
-                        <li>23. Christoph Jansen 🇩🇪</li>
-                        <li>24. Lio Schuster 🇩🇪</li>
-                        <li>25. Ariel David 🇮🇱</li>
-                        <li>26. Francesco Camarda 🇮🇹</li>
-                        <li>27. Ronny Jansen 🇩🇪</li>
-                        <li>28. Dean Huijsen 🇪🇸</li>
-                        <li>29. Luka Vuskovic 🇭🇷</li>
-                        <li>30. Sverre Halseth Nypan 🇳🇴</li>
-                        <li>31. Chris Rigg 🇬🇧</li>
-                        <li>32. Finn Jeltsch 🇩🇪</li>
-                        <li>33. Lennart Karl 🇩🇪</li>
-                        <li>34. Try Nyoni 🇬🇧</li>
-                        <li>35. Adrián Liso 🇪🇸</li>
-                        <li>36. Esmir Bajraktarevic 🇧🇦</li>
-                        <li>38. Simon Straudi 🇮🇹</li>
-                        <li>39. Bruno Durdov 🇭🇷</li>
-                        <li>40. Kees Smit 🇳🇱</li>
-                        <li>41. Tim Winter 🇩🇪</li>
-                    </ul>
-                </div>
-            </li>
-            <li><span class="frauen-link" onclick="toggleKader('frauen')">1. Frauenmannschaft:</span> 1. Bundesliga – Trainer: Daris Jean-Baptiste
-                <div id="frauenKader" class="kader">
-                    <ul>
-                        <li>1. Zita Meier 🇩🇪</li>
-                        <li>2. Annaliese Jung 🇩🇪</li>
-                        <li>3. Ajda Oman 🇸🇮</li>
-                        <li>4. Ulla Fischer 🇩🇪</li>
-                        <li>5. Liane König 🇩🇪</li>
-                        <li>6. Māra Lukovs 🇱🇻</li>
-                        <li>7. Franziska Neumann 🇩🇪</li>
-                        <li>8. Luise Lehmann 🇩🇪</li>
-                        <li>9. Frieda Thomas 🇩🇪</li>
-                        <li>10. Elisa Müller 🇨🇭</li>
-                        <li>11. Tabea Bender 🇩🇪</li>
-                        <li>12. Lisa Siegmund 🇩🇪</li>
-                        <li>13. Liesel Schröder 🇩🇪</li>
-                        <li>14. Villborg Hjalmytysdottir 🇮🇸</li>
-                        <li>15. Gretchen Schuster 🇩🇪</li>
-                        <li>16. Valentina Meyer 🇩🇪</li>
-                        <li>17. Agnes Varga 🇭🇺</li>
-                        <li>18. Yasmine Mayer 🇩🇪</li>
-                        <li>19. Liesel Zimmermann 🇩🇪</li>
-                        <li>20. Natascha Neumann 🇩🇪</li>
-                        <li>21. Roswitha Strasser 🇦🇹</li>
-                        <li>22. Sarah Vogt 🇩🇪</li>
-                        <li>23. Amalia Kaiser 🇩🇪</li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
+        <h3>1. Herrenmannschaft (2. Bundesliga – Trainer: Marijo Mandžukić)</h3>
+        <div class="filter-section">
+            <select id="herrenFilterNationality" onchange="filterTable('herrenTable', this.value)">
+                <option value="">Filter nach Nationalität</option>
+                <option value="🇩🇪">Deutschland</option>
+                <option value="🇮🇹">Italien</option>
+                <option value="🇫🇷">Frankreich</option>
+                <option value="🇳🇴">Norwegen</option>
+                <option value="🇪🇸">Spanien</option>
+                <option value="🇨🇭">Schweiz</option>
+                <option value="🇧🇦">Bosnien und Herzegowina</option>
+                <option value="🇮🇱">Israel</option>
+                <option value="🇭🇷">Kroatien</option>
+                <option value="🇬🇧">Großbritannien</option>
+                <option value="🇳🇱">Niederlande</option>
+                <option value="🇸🇪">Schweden</option>
+            </select>
+        </div>
+        <table id="herrenTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable('herrenTable', 0)">Nummer</th>
+                    <th onclick="sortTable('herrenTable', 1)">Name</th>
+                    <th onclick="sortTable('herrenTable', 2)">Nationalität</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Christian Schmidt</td><td>🇩🇪</td></tr>
+                <tr><td>2</td><td>Dennis Seimen</td><td>🇩🇪</td></tr>
+                <tr><td>3</td><td>Niels Simon</td><td>🇩🇪</td></tr>
+                <tr><td>4</td><td>Jonas Schmitz</td><td>🇩🇪</td></tr>
+                <tr><td>5</td><td>Giorgio Scalvini</td><td>🇮🇹</td></tr>
+                <tr><td>6</td><td>Fabian Friedrich</td><td>🇩🇪</td></tr>
+                <tr><td>7</td><td>Rayan Cherki</td><td>🇫🇷</td></tr>
+                <tr><td>8</td><td>Antonio Nusa</td><td>🇳🇴</td></tr>
+                <tr><td>9</td><td>Emil Weber</td><td>🇩🇪</td></tr>
+                <tr><td>10</td><td>Andre Keller</td><td>🇩🇪</td></tr>
+                <tr><td>11</td><td>Leo Graf</td><td>🇩🇪</td></tr>
+                <tr><td>12</td><td>Marco Wagner</td><td>🇩🇪</td></tr>
+                <tr><td>13</td><td>Jona Arnold</td><td>🇩🇪</td></tr>
+                <tr><td>14</td><td>Oier Ramirez</td><td>🇪🇸</td></tr>
+                <tr><td>15</td><td>Johann Jung</td><td>🇩🇪</td></tr>
+                <tr><td>16</td><td>Elis Schäfer</td><td>🇩🇪</td></tr>
+                <tr><td>17</td><td>Linus Frank</td><td>🇩🇪</td></tr>
+                <tr><td>18</td><td>Jan Zimmermann</td><td>🇩🇪</td></tr>
+                <tr><td>19</td><td>Patrik Bengtsson</td><td>🇸🇪</td></tr>
+                <tr><td>20</td><td>Jörg Fontana</td><td>🇨🇭</td></tr>
+                <tr><td>21</td><td>Enis Slilhovic</td><td>🇧🇦</td></tr>
+                <tr><td>22</td><td>Yolan Lang</td><td>🇨🇭</td></tr>
+                <tr><td>23</td><td>Christoph Jansen</td><td>🇩🇪</td></tr>
+                <tr><td>24</td><td>Lio Schuster</td><td>🇩🇪</td></tr>
+                <tr><td>25</td><td>Ariel David</td><td>🇮🇱</td></tr>
+                <tr><td>26</td><td>Francesco Camarda</td><td>🇮🇹</td></tr>
+                <tr><td>27</td><td>Ronny Jansen</td><td>🇩🇪</td></tr>
+                <tr><td>28</td><td>Dean Huijsen</td><td>🇪🇸</td></tr>
+                <tr><td>29</td><td>Luka Vuskovic</td><td>🇭🇷</td></tr>
+                <tr><td>30</td><td>Sverre Halseth Nypan</td><td>🇳🇴</td></tr>
+                <tr><td>31</td><td>Chris Rigg</td><td>🇬🇧</td></tr>
+                <tr><td>32</td><td>Finn Jeltsch</td><td>🇩🇪</td></tr>
+                <tr><td>33</td><td>Lennart Karl</td><td>🇩🇪</td></tr>
+                <tr><td>34</td><td>Try Nyoni</td><td>🇬🇧</td></tr>
+                <tr><td>35</td><td>Adrián Liso</td><td>🇪🇸</td></tr>
+                <tr><td>36</td><td>Esmir Bajraktarevic</td><td>🇧🇦</td></tr>
+                <tr><td>38</td><td>Simon Straudi</td><td>🇮🇹</td></tr>
+                <tr><td>39</td><td>Bruno Durdov</td><td>🇭🇷</td></tr>
+                <tr><td>40</td><td>Kees Smit</td><td>🇳🇱</td></tr>
+                <tr><td>41</td><td>Tim Winter</td><td>🇩🇪</td></tr>
+            </tbody>
+        </table>
+
+        <h3>1. Frauenmannschaft (1. Bundesliga – Trainer: Daris Jean-Baptiste)</h3>
+        <div class="filter-section">
+            <select id="frauenFilterNationality" onchange="filterTable('frauenTable', this.value)">
+                <option value="">Filter nach Nationalität</option>
+                <option value="🇩🇪">Deutschland</option>
+                <option value="🇸🇮">Slowenien</option>
+                <option value="🇱🇻">Lettland</option>
+                <option value="🇨🇭">Schweiz</option>
+                <option value="🇮🇸">Island</option>
+                <option value="🇭🇺">Ungarn</option>
+                <option value="🇦🇹">Österreich</option>
+            </select>
+        </div>
+        <table id="frauenTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable('frauenTable', 0)">Nummer</th>
+                    <th onclick="sortTable('frauenTable', 1)">Name</th>
+                    <th onclick="sortTable('frauenTable', 2)">Nationalität</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Zita Meier</td><td>🇩🇪</td></tr>
+                <tr><td>2</td><td>Annaliese Jung</td><td>🇩🇪</td></tr>
+                <tr><td>3</td><td>Ajda Oman</td><td>🇸🇮</td></tr>
+                <tr><td>4</td><td>Ulla Fischer</td><td>🇩🇪</td></tr>
+                <tr><td>5</td><td>Liane König</td><td>🇩🇪</td></tr>
+                <tr><td>6</td><td>Māra Lukovs</td><td>🇱🇻</td></tr>
+                <tr><td>7</td><td>Franziska Neumann</td><td>🇩🇪</td></tr>
+                <tr><td>8</td><td>Luise Lehmann</td><td>🇩🇪</td></tr>
+                <tr><td>9</td><td>Frieda Thomas</td><td>🇩🇪</td></tr>
+                <tr><td>10</td><td>Elisa Müller</td><td>🇨🇭</td></tr>
+                <tr><td>11</td><td>Tabea Bender</td><td>🇩🇪</td></tr>
+                <tr><td>12</td><td>Lisa Siegmund</td><td>🇩🇪</td></tr>
+                <tr><td>13</td><td>Liesel Schröder</td><td>🇩🇪</td></tr>
+                <tr><td>14</td><td>Villborg Hjalmytysdottir</td><td>🇮🇸</td></tr>
+                <tr><td>15</td><td>Gretchen Schuster</td><td>🇩🇪</td></tr>
+                <tr><td>16</td><td>Valentina Meyer</td><td>🇩🇪</td></tr>
+                <tr><td>17</td><td>Agnes Varga</td><td>🇭🇺</td></tr>
+                <tr><td>18</td><td>Yasmine Mayer</td><td>🇩🇪</td></tr>
+                <tr><td>19</td><td>Liesel Zimmermann</td><td>🇩🇪</td></tr>
+                <tr><td>20</td><td>Natascha Neumann</td><td>🇩🇪</td></tr>
+                <tr><td>21</td><td>Roswitha Strasser</td><td>🇦🇹</td></tr>
+                <tr><td>22</td><td>Sarah Vogt</td><td>🇩🇪</td></tr>
+                <tr><td>23</td><td>Amalia Kaiser</td><td>🇩🇪</td></tr>
+            </tbody>
+        </table>
         <p>Interessiert? Besuche uns auf unserem Trainingsort oder folge uns auf Instagram!</p>
     </section>
 
     <section id="spielplan">
         <h2>Spielplan (Herren)</h2>
-        <table>
+        <div class="filter-section">
+            <select id="herrenFilterHomeAway" onchange="filterTable('herrenSchedule', this.value)">
+                <option value="">Filter Heim/Auswärts</option>
+                <option value="Heim">Heim</option>
+                <option value="Auswärts">Auswärts</option>
+            </select>
+            <input type="date" id="herrenFilterDate" oninput="filterTable('herrenSchedule', '', this.value)">
+        </div>
+        <table id="herrenSchedule">
             <thead>
                 <tr>
-                    <th>Datum</th>
-                    <th>Heim/Auswärts</th>
-                    <th>Gegner</th>
-                    <th>Uhrzeit</th>
-                    <th>Ort</th>
+                    <th onclick="sortTable('herrenSchedule', 0)">Datum</th>
+                    <th onclick="sortTable('herrenSchedule', 1)">Heim/Auswärts</th>
+                    <th onclick="sortTable('herrenSchedule', 2)">Gegner</th>
+                    <th onclick="sortTable('herrenSchedule', 3)">Uhrzeit</th>
+                    <th onclick="sortTable('herrenSchedule', 4)">Ort</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>28.07.2025</td>
-                    <td>Heim</td>
-                    <td>Arminia Bielefeld</td>
-                    <td>15:00</td>
-                    <td>Lanxess Arena</td>
-                </tr>
-                <tr>
-                    <td>04.08.2025</td>
-                    <td>Heim</td>
-                    <td>1. FC Kaiserslautern</td>
-                    <td>15:00</td>
-                    <td>Lanxess Arena</td>
-                </tr>
-                <tr>
-                    <td>11.08.2025</td>
-                    <td>Auswärts</td>
-                    <td>Hamburger SV</td>
-                    <td>15:00</td>
-                    <td>Volksparkstadion</td>
-                </tr>
-                <tr>
-                    <td>17.08.2025</td>
-                    <td>Heim</td>
-                    <td>FC Schalke 04</td>
-                    <td>15:00</td>
-                    <td>Lanxess Arena</td>
-                </tr>
-                <tr>
-                    <td>23.08.2025</td>
-                    <td>Auswärts</td>
-                    <td>Hertha BSC</td>
-                    <td>15:00</td>
-                    <td>Olympiastadion</td>
-                </tr>
-                <tr>
-                    <td>30.08.2025</td>
-                    <td>Heim</td>
-                    <td>Preußen Münster</td>
-                    <td>15:00</td>
-                    <td>Lanxess Arena</td>
-                </tr>
-                <tr>
-                    <td>14.09.2025</td>
-                    <td>Auswärts</td>
-                    <td>1. FC Köln</td>
-                    <td>15:00</td>
-                    <td>RheinEnergieSTADION</td>
-                </tr>
-                <tr>
-                    <td>22.09.2025</td>
-                    <td>Auswärts</td>
-                    <td>SV Elversberg</td>
-                    <td>15:00</td>
-                    <td>URSAPHARM-Arena</td>
-                </tr>
-                <tr>
-                    <td>28.09.2025</td>
-                    <td>Heim</td>
-                    <td>Hannover 96</td>
-                    <td>15:00</td>
-                    <td>Lanxess Arena</td>
-                </tr>
-                <tr>
-                    <td>05.10.2025</td>
-                    <td>Auswärts</td>
-                    <td>SSV Ulm 1846</td>
-                    <td>15:00</td>
-                    <td>Donaustadion</td>
-                </tr>
-                <tr>
-                    <td>20.10.2025</td>
-                    <td>Heim</td>
-                    <td>Eintracht Braunschweig</td>
-                    <td>15:00</td>
-                    <td>Lanxess Arena</td>
-                </tr>
-                <tr>
-                    <td>26.10.2025</td>
-                    <td>Auswärts</td>
-                    <td>1. FC Nürnberg</td>
-                    <td>15:00</td>
-                    <td>Max-Morlock-Stadion</td>
-                </tr>
+                <tr><td>28.07.2025</td><td>Heim</td><td>Arminia Bielefeld</td><td>15:00</td><td>Lanxess Arena</td></tr>
+                <tr><td>04.08.2025</td><td>Heim</td><td>1. FC Kaiserslautern</td><td>15:00</td><td>Lanxess Arena</td></tr>
+                <tr><td>11.08.2025</td><td>Auswärts</td><td>Hamburger SV</td><td>15:00</td><td>Volksparkstadion</td></tr>
+                <tr><td>17.08.2025</td><td>Heim</td><td>FC Schalke 04</td><td>15:00</td><td>Lanxess Arena</td></tr>
+                <tr><td>23.08.2025</td><td>Auswärts</td><td>Hertha BSC</td><td>15:00</td><td>Olympiastadion</td></tr>
+                <tr><td>30.08.2025</td><td>Heim</td><td>Preußen Münster</td><td>15:00</td><td>Lanxess Arena</td></tr>
+                <tr><td>14.09.2025</td><td>Auswärts</td><td>1. FC Köln</td><td>15:00</td><td>RheinEnergieSTADION</td></tr>
+                <tr><td>22.09.2025</td><td>Auswärts</td><td>SV Elversberg</td><td>15:00</td><td>URSAPHARM-Arena</td></tr>
+                <tr><td>28.09.2025</td><td>Heim</td><td>Hannover 96</td><td>15:00</td><td>Lanxess Arena</td></tr>
+                <tr><td>05.10.2025</td><td>Auswärts</td><td>SSV Ulm 1846</td><td>15:00</td><td>Donaustadion</td></tr>
+                <tr><td>20.10.2025</td><td>Heim</td><td>Eintracht Braunschweig</td><td>15:00</td><td>Lanxess Arena</td></tr>
+                <tr><td>26.10.2025</td><td>Auswärts</td><td>1. FC Nürnberg</td><td>15:00</td><td>Max-Morlock-Stadion</td></tr>
             </tbody>
         </table>
 
         <h2>Spielplan (Frauen)</h2>
-        <table>
+        <div class="filter-section">
+            <select id="frauenFilterHomeAway" onchange="filterTable('frauenSchedule', this.value)">
+                <option value="">Filter Heim/Auswärts</option>
+                <option value="Heim">Heim</option>
+                <option value="Auswärts">Auswärts</option>
+            </select>
+            <input type="date" id="frauenFilterDate" oninput="filterTable('frauenSchedule', '', this.value)">
+            <select id="frauenFilterCompetition" onchange="filterTable('frauenSchedule', '', '', this.value)">
+                <option value="">Filter Wettbewerb</option>
+                <option value="Bundesliga">Bundesliga</option>
+                <option value="UEFA Women's Champions League">UEFA Women's Champions League</option>
+            </select>
+        </div>
+        <table id="frauenSchedule">
             <thead>
                 <tr>
-                    <th>Datum</th>
-                    <th>Heim/Auswärts</th>
-                    <th>Gegner</th>
-                    <th>Uhrzeit</th>
-                    <th>Ort</th>
-                    <th>Wettbewerb</th>
+                    <th onclick="sortTable('frauenSchedule', 0)">Datum</th>
+                    <th onclick="sortTable('frauenSchedule', 1)">Heim/Auswärts</th>
+                    <th onclick="sortTable('frauenSchedule', 2)">Gegner</th>
+                    <th onclick="sortTable('frauenSchedule', 3)">Uhrzeit</th>
+                    <th onclick="sortTable('frauenSchedule', 4)">Ort</th>
+                    <th onclick="sortTable('frauenSchedule', 5)">Wettbewerb</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>30.08.2025</td>
-                    <td>Heim</td>
-                    <td>FC Bayern München</td>
-                    <td>15:00</td>
-                    <td>Lanxess Arena</td>
-                    <td>Bundesliga</td>
-                </tr>
-                <tr>
-                    <td>15.09.2025</td>
-                    <td>Auswärts</td>
-                    <td>Werder Bremen</td>
-                    <td>15:00</td>
-                    <td>Weserstadion</td>
-                    <td>Bundesliga</td>
-                </tr>
-                <tr>
-                    <td>21.09.2025</td>
-                    <td>Heim</td>
-                    <td>Eintracht Frankfurt</td>
-                    <td>15:00</td>
-                    <td>Lanxess Arena</td>
-                    <td>Bundesliga</td>
-                </tr>
-                <tr>
-                    <td>28.09.2025</td>
-                    <td>Heim</td>
-                    <td>RB Leipzig</td>
-                    <td>15:00</td>
-                    <td>Lanxess Arena</td>
-                    <td>Bundesliga</td>
-                </tr>
-                <tr>
-                    <td>04.10.2025</td>
-                    <td>Auswärts</td>
-                    <td>SC Freiburg</td>
-                    <td>15:00</td>
-                    <td>Dreisamstadion</td>
-                    <td>Bundesliga</td>
-                </tr>
-                <tr>
-                    <td>09.10.2025</td>
-                    <td>Heim</td>
-                    <td>Real Madrid</td>
-                    <td>18:00</td>
-                    <td>Lanxess Arena</td>
-                    <td>UEFA Women's Champions League</td>
-                </tr>
-                <tr>
-                    <td>12.10.2025</td>
-                    <td>Heim</td>
-                    <td>SGS Essen 1968</td>
-                    <td>15:00</td>
-                    <td>Lanxess Arena</td>
-                    <td>Bundesliga</td>
-                </tr>
-                <tr>
-                    <td>16.10.2025</td>
-                    <td>Heim</td>
-                    <td>Chelsea Football Club</td>
-                    <td>18:00</td>
-                    <td>Lanxess Arena</td>
-                    <td>UEFA Women's Champions League</td>
-                </tr>
-                <tr>
-                    <td>20.10.2025</td>
-                    <td>Auswärts</td>
-                    <td>TSG Hoffenheim</td>
-                    <td>15:00</td>
-                    <td>Dietmar-Hopp-Stadion</td>
-                    <td>Bundesliga</td>
-                </tr>
+                <tr><td>30.08.2025</td><td>Heim</td><td>FC Bayern München</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td></tr>
+                <tr><td>15.09.2025</td><td>Auswärts</td><td>Werder Bremen</td><td>15:00</td><td>Weserstadion</td><td>Bundesliga</td></tr>
+                <tr><td>21.09.2025</td><td>Heim</td><td>Eintracht Frankfurt</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td></tr>
+                <tr><td>28.09.2025</td><td>Heim</td><td>RB Leipzig</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td></tr>
+                <tr><td>04.10.2025</td><td>Auswärts</td><td>SC Freiburg</td><td>15:00</td><td>Dreisamstadion</td><td>Bundesliga</td></tr>
+                <tr><td>09.10.2025</td><td>Heim</td><td>Real Madrid</td><td>18:00</td><td>Lanxess Arena</td><td>UEFA Women's Champions League</td></tr>
+                <tr><td>12.10.2025</td><td>Heim</td><td>SGS Essen 1968</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td></tr>
+                <tr><td>16.10.2025</td><td>Heim</td><td>Chelsea Football Club</td><td>18:00</td><td>Lanxess Arena</td><td>UEFA Women's Champions League</td></tr>
+                <tr><td>20.10.2025</td><td>Auswärts</td><td>TSG Hoffenheim</td><td>15:00</td><td>Dietmar-Hopp-Stadion</td><td>Bundesliga</td></tr>
             </tbody>
         </table>
     </section>
@@ -337,24 +262,39 @@
     </footer>
 
     <script>
-        function toggleKader(team) {
-            const kaderHerren = document.getElementById('herrenKader');
-            const kaderFrauen = document.getElementById('frauenKader');
-            if (team === 'herren') {
-                if (kaderHerren.style.display === 'block') {
-                    kaderHerren.style.display = 'none';
-                } else {
-                    kaderHerren.style.display = 'block';
-                    kaderFrauen.style.display = 'none'; // Schließe das andere
-                }
-            } else if (team === 'frauen') {
-                if (kaderFrauen.style.display === 'block') {
-                    kaderFrauen.style.display = 'none';
-                } else {
-                    kaderFrauen.style.display = 'block';
-                    kaderHerren.style.display = 'none'; // Schließe das andere
-                }
+        function sortTable(tableId, columnIndex) {
+            const table = document.getElementById(tableId);
+            const tbody = table.getElementsByTagName('tbody')[0];
+            const rows = Array.from(tbody.getElementsByTagName('tr'));
+
+            rows.sort((a, b) => {
+                const aValue = a.cells[columnIndex].textContent.trim();
+                const bValue = b.cells[columnIndex].textContent.trim();
+                return aValue.localeCompare(bValue, undefined, { numeric: true });
+            });
+
+            while (tbody.firstChild) {
+                tbody.removeChild(tbody.firstChild);
             }
+            rows.forEach(row => tbody.appendChild(row));
+        }
+
+        function filterTable(tableId, homeAwayFilter = '', dateFilter = '', competitionFilter = '') {
+            const table = document.getElementById(tableId);
+            const tbody = table.getElementsByTagName('tbody')[0];
+            const rows = Array.from(tbody.getElementsByTagName('tr'));
+
+            rows.forEach(row => {
+                const homeAway = row.cells[1].textContent.trim();
+                const date = row.cells[0].textContent.trim();
+                const competition = tableId === 'frauenSchedule' ? row.cells[5].textContent.trim() : '';
+
+                const dateMatch = !dateFilter || new Date(date.split('.').reverse().join('-')) >= new Date(dateFilter);
+                const homeAwayMatch = !homeAwayFilter || homeAway === homeAwayFilter;
+                const competitionMatch = !competitionFilter || competition === competitionFilter;
+
+                row.style.display = dateMatch && homeAwayMatch && competitionMatch ? '' : 'none';
+            });
         }
     </script>
 </body>
