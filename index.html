@@ -18,8 +18,6 @@
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background-color: #006400; color: white; cursor: pointer; }
         th:hover { background-color: #004d00; }
-        .filter-section { margin-bottom: 10px; }
-        .filter-section select, .filter-section input { padding: 5px; margin-right: 10px; }
         footer { background-color: #006400; color: white; text-align: center; padding: 10px; }
         #logo { width: 100px; height: auto; margin: 10px auto; display: block; }
         .news-link { color: #006400; text-decoration: underline; cursor: pointer; font-weight: bold; }
@@ -63,23 +61,6 @@
     <section id="mannschaften">
         <h2>Unsere Mannschaften</h2>
         <h3>1. Herrenmannschaft (2. Bundesliga – Trainer: Marijo Mandžukić)</h3>
-        <div class="filter-section">
-            <select id="herrenFilterNationality" onchange="filterTable('herrenTable', this.value)">
-                <option value="">Filter nach Nationalität</option>
-                <option value="🇩🇪">Deutschland</option>
-                <option value="🇮🇹">Italien</option>
-                <option value="🇫🇷">Frankreich</option>
-                <option value="🇳🇴">Norwegen</option>
-                <option value="🇪🇸">Spanien</option>
-                <option value="🇨🇭">Schweiz</option>
-                <option value="🇧🇦">Bosnien und Herzegowina</option>
-                <option value="🇮🇱">Israel</option>
-                <option value="🇭🇷">Kroatien</option>
-                <option value="🇬🇧">Großbritannien</option>
-                <option value="🇳🇱">Niederlande</option>
-                <option value="🇸🇪">Schweden</option>
-            </select>
-        </div>
         <table id="herrenTable">
             <thead>
                 <tr>
@@ -133,18 +114,6 @@
         </table>
 
         <h3>1. Frauenmannschaft (1. Bundesliga – Trainer: Daris Jean-Baptiste)</h3>
-        <div class="filter-section">
-            <select id="frauenFilterNationality" onchange="filterTable('frauenTable', this.value)">
-                <option value="">Filter nach Nationalität</option>
-                <option value="🇩🇪">Deutschland</option>
-                <option value="🇸🇮">Slowenien</option>
-                <option value="🇱🇻">Lettland</option>
-                <option value="🇨🇭">Schweiz</option>
-                <option value="🇮🇸">Island</option>
-                <option value="🇭🇺">Ungarn</option>
-                <option value="🇦🇹">Österreich</option>
-            </select>
-        </div>
         <table id="frauenTable">
             <thead>
                 <tr>
@@ -184,14 +153,6 @@
 
     <section id="spielplan">
         <h2>Spielplan (Herren)</h2>
-        <div class="filter-section">
-            <select id="herrenFilterHomeAway" onchange="filterTable('herrenSchedule', this.value)">
-                <option value="">Filter Heim/Auswärts</option>
-                <option value="Heim">Heim</option>
-                <option value="Auswärts">Auswärts</option>
-            </select>
-            <input type="date" id="herrenFilterDate" oninput="filterTable('herrenSchedule', '', this.value)">
-        </div>
         <table id="herrenSchedule">
             <thead>
                 <tr>
@@ -219,19 +180,6 @@
         </table>
 
         <h2>Spielplan (Frauen)</h2>
-        <div class="filter-section">
-            <select id="frauenFilterHomeAway" onchange="filterTable('frauenSchedule', this.value)">
-                <option value="">Filter Heim/Auswärts</option>
-                <option value="Heim">Heim</option>
-                <option value="Auswärts">Auswärts</option>
-            </select>
-            <input type="date" id="frauenFilterDate" oninput="filterTable('frauenSchedule', '', this.value)">
-            <select id="frauenFilterCompetition" onchange="filterTable('frauenSchedule', '', '', this.value)">
-                <option value="">Filter Wettbewerb</option>
-                <option value="Bundesliga">Bundesliga</option>
-                <option value="UEFA Women's Champions League">UEFA Women's Champions League</option>
-            </select>
-        </div>
         <table id="frauenSchedule">
             <thead>
                 <tr>
@@ -277,24 +225,6 @@
                 tbody.removeChild(tbody.firstChild);
             }
             rows.forEach(row => tbody.appendChild(row));
-        }
-
-        function filterTable(tableId, homeAwayFilter = '', dateFilter = '', competitionFilter = '') {
-            const table = document.getElementById(tableId);
-            const tbody = table.getElementsByTagName('tbody')[0];
-            const rows = Array.from(tbody.getElementsByTagName('tr'));
-
-            rows.forEach(row => {
-                const homeAway = row.cells[1].textContent.trim();
-                const date = row.cells[0].textContent.trim();
-                const competition = tableId === 'frauenSchedule' ? row.cells[5].textContent.trim() : '';
-
-                const dateMatch = !dateFilter || new Date(date.split('.').reverse().join('-')) >= new Date(dateFilter);
-                const homeAwayMatch = !homeAwayFilter || homeAway === homeAwayFilter;
-                const competitionMatch = !competitionFilter || competition === competitionFilter;
-
-                row.style.display = dateMatch && homeAwayMatch && competitionMatch ? '' : 'none';
-            });
         }
     </script>
 </body>
