@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Detaillierte News des Fußballvereins Kölner Drachen aus Köln.">
-    <meta name="keywords" content="Kölner Drachen, News, Fußball, Köln">
+    <meta name="description" content="Aktuelle Neuigkeiten des Fußballvereins Kölner Drachen aus Köln.">
+    <meta name="keywords" content="Kölner Drachen, News, Fußball, Köln, Frauenfußball">
     <meta name="author" content="Kölner Drachen e.V.">
     <title>Kölner Drachen - News</title>
     <style>
@@ -14,73 +14,44 @@
         nav ul li { display: inline; margin: 0 15px; }
         nav ul li a { color: white; text-decoration: none; }
         section { padding: 20px; margin: 10px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .news-item { margin-bottom: 10px; }
-        .news-headline { cursor: pointer; font-weight: bold; color: #006400; padding: 10px; border-bottom: 1px solid #ddd; }
-        .news-headline:hover { background-color: #f0f0f0; }
-        .news-details { display: none; padding: 10px; background-color: #f9f9f9; margin-top: 5px; }
-        .news-details p { margin: 0; }
         footer { background-color: #006400; color: white; text-align: center; padding: 10px; }
+        #logo { width: 100px; height: auto; margin: 10px auto; display: block; }
+        .news-item { margin-bottom: 20px; }
+        .news-date { font-weight: bold; color: #006400; }
     </style>
 </head>
 <body>
     <header>
+        <img id="logo" src="Logo.png" alt="Logo der Kölner Drachen">
         <h1>Kölner Drachen e.V. - News</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="news.html">News</a></li>
                 <li><a href="index.html#ueber-uns">Über uns</a></li>
                 <li><a href="index.html#mannschaften">Mannschaften</a></li>
                 <li><a href="index.html#spielplan">Spielplan</a></li>
+                <li><a href="news.html">News</a></li>
             </ul>
         </nav>
     </header>
 
     <section>
-        <h2>Aktuelle News</h2>
+        <h2>Aktuelle Neuigkeiten</h2>
+
         <div class="news-item">
-            <div class="news-headline" onclick="toggleDetails('news1')">01.07.2025 - Kölner Drachen lehnen Vorbereitungsturnier ab</div>
-            <div id="news1" class="news-details">
-                <p>Der Verein gibt hiermit offiziell bekannt, dass er nicht am Vorbereitungsturnier in Südkorea teilnehmen wird. Diese Entscheidung wurde getroffen, um die Belastung der Spieler vor dem anstehenden Saisonstart zu reduzieren und eine optimale Vorbereitung auf die kommende Spielzeit zu gewährleisten. Der Sportdirektor bestätigte diese Maßnahme am heutigen Tage und betonte, dass die Regeneration und Gesundheit der Mannschaft derzeit oberste Priorität haben.</p>
-            </div>
+            <p class="news-date">14. Juli 2025 - Kölner Drachen Frauen suchen Verstärkung</p>
+            <p>Die Kölner Drachen sind derzeit aktiv auf der Suche nach fußballbegeisterten Persönlichkeiten, die das Team im Bereich Scouting sowie in verschiedenen Trainerfunktionen verstärken möchten. Gesucht werden unter anderem engagierte Co-Trainer:innen und Assistenztrainer:innen, die ihre Leidenschaft für den Fußball in die Weiterentwicklung der Mannschaft einbringen möchten.</p>
         </div>
+
         <div class="news-item">
-            <div class="news-headline" onclick="toggleDetails('news2')">21.07.2025 - Marijo Mandžukić übernimmt das Traineramt</div>
-            <div id="news2" class="news-details">
-                <p>Der ehemalige Profi-Fußballer Marijo Mandžukić übernimmt ab sofort das Traineramt bei den Kölner Drachen. Nach einer längeren Phase des Wartens ist die Suche nach einem neuen Cheftrainer damit erfolgreich abgeschlossen. Mandžukić kann bereits auf beachtliche Erfolge als Trainer zurückblicken – so führte er den Verein Dinamo Dortmund zum Gewinn der UEFA Conference League. Nun soll er seine Erfahrung und Leidenschaft an der Seitenlinie auch in Köln einbringen und die Mannschaft auf die kommenden Herausforderungen vorbereiten.</p>
-            </div>
+            <p class="news-date">1. August 2025 - Kölner Drachen bekommen es mit dem FC Bayern München zu tun</p>
+            <p>Die Kölner Drachen-Frauen starten mit einem echten Highlight in die neue Saison der Google Pixel Frauen-Bundesliga (GPFBL). Zum Auftakt empfängt das Team von Cheftrainer Daris Jean-Baptiste den FC Bayern München in der heimischen Lanxess Arena. Nur eine Woche später folgt das erste Auswärtsspiel beim SV Werder Bremen.</p>
+            <p>„Wir wollen mutig und leidenschaftlich auftreten und zeigen, dass mit uns zu rechnen ist“, so Trainer Daris Jean-Baptiste über den bevorstehenden Saisonstart.</p>
         </div>
-        <div class="news-item">
-            <div class="news-headline" onclick="toggleDetails('news3')">27.07.2025 - Kölner Drachen treffen im DFB-Pokal auf Arminia Bielefeld</div>
-            <div id="news3" class="news-details">
-                <p>Die DFL hat heute die Termine für die kommende Runde im DFB-Pokal bekanntgegeben. In der ersten Runde treffen die Kölner Drachen auf Arminia Bielefeld – ein spannendes Duell, das zugleich das erste Pflichtspiel unter dem neuen Cheftrainer Marijo Mandžukić sein wird. Die Partie findet am 28. Juli 2025 statt. Beide Mannschaften werden alles daransetzen, einen erfolgreichen Start in den Pokalwettbewerb zu erwischen.</p>
-            </div>
-        </div>
-        <div class="news-item">
-            <div class="news-headline" onclick="toggleDetails('news4')">27.07.2025 - Spielplan bis 26. Oktober 2025 festgelegt</div>
-            <div id="news4" class="news-details">
-                <p>Neben den Terminen für den DFB-Pokal hat die DFL heute auch den offiziellen Spielplan der 2. Bundesliga bekanntgegeben. Die Kölner Drachen starten dabei mit einem Heimspiel in die neue Saison: Zum Auftakt empfängt das Team in der Lanxess Arena den 1. FC Kaiserslautern. Nur eine Woche später steht bereits das erste Auswärtsspiel an – dann gastieren die Drachen beim Hamburger SV im traditionsreichen Volksparkstadion.</p>
-            </div>
-        </div>
-        <h3>Frauenmannschaft</h3>
-        <p>Aktuell keine detaillierten News verfügbar. Bleib dran für Updates!</p>
     </section>
 
     <footer>
-        <p>&copy; 2025 Kölner Drachen e.V. | <a href="index.html#impressum" style="color: white;">Impressum</a> | <a href="index.html#datenschutz" style="color: white;">Datenschutz</a> | <a href="index.html#agb" style="color: white;">AGB</a></p>
+        <p>&copy; 2025 Kölner Drachen e.V. | <a href="index.html#impressum" style="color: white;">Impressum</a> | <a href="Datenschutz.html" style="color: white;">Datenschutz</a> | <a href="AGB.html" style="color: white;">AGB</a></p>
     </footer>
-
-    <script>
-        function toggleDetails(newsId) {
-            const details = document.getElementById(newsId);
-            if (details.style.display === "block") {
-                details.style.display = "none";
-            } else {
-                // Schließe alle anderen Details
-                document.querySelectorAll('.news-details').forEach(item => item.style.display = "none");
-                details.style.display = "block";
-            }
-        }
-    </script>
 </body>
 </html>
