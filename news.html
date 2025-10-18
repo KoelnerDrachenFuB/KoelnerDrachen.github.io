@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Detaillierte News des Fußballvereins Kölner Drachen aus Köln.">
-    <meta name="keywords" content="Kölner Drachen, News, Fußball, Köln">
+    <meta name="description" content="Aktuelle News des Fußballvereins Kölner Drachen aus Köln.">
+    <meta name="keywords" content="Kölner Drachen, News, Fußball, Köln, Ergebnisse">
     <meta name="author" content="Kölner Drachen e.V.">
     <title>Kölner Drachen - News</title>
     <style>
@@ -14,104 +14,47 @@
         nav ul li { display: inline; margin: 0 15px; }
         nav ul li a { color: white; text-decoration: none; }
         section { padding: 20px; margin: 10px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .news-item { margin-bottom: 10px; }
-        .news-headline { cursor: pointer; font-weight: bold; color: #006400; padding: 10px; border-bottom: 1px solid #ddd; }
-        .news-headline:hover { background-color: #f0f0f0; }
-        .news-details { display: none; padding: 10px; background-color: #f9f9f9; margin-top: 5px; }
-        .news-details p { margin: 0 0 10px 0; }
         footer { background-color: #006400; color: white; text-align: center; padding: 10px; }
+        #logo { width: 100px; height: auto; margin: 10px auto; display: block; }
+        .news-item { margin-bottom: 20px; }
+        .news-item h3 { color: #006400; }
     </style>
 </head>
 <body>
     <header>
+        <img id="logo" src="Logo.png" alt="Logo der Kölner Drachen">
         <h1>Kölner Drachen e.V. - News</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="news.html">News</a></li>
                 <li><a href="index.html#ueber-uns">Über uns</a></li>
                 <li><a href="index.html#mannschaften">Mannschaften</a></li>
                 <li><a href="index.html#spielplan">Spielplan</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="ergebnisse.html">Ergebnisse</a></li>
             </ul>
         </nav>
     </header>
+
     <section>
-        <h2>Aktuelle News</h2>
-
-        <h3>Herrenmannschaft</h3>
         <div class="news-item">
-            <div class="news-headline" onclick="toggleDetails('news1')">01.07.2025 - Kölner Drachen lehnen Vorbereitungsturnier ab</div>
-            <div id="news1" class="news-details">
-                <p>Der Verein gibt hiermit offiziell bekannt, dass er nicht am Vorbereitungsturnier in Südkorea teilnehmen wird. Diese Entscheidung wurde getroffen, um die Belastung der Spieler vor dem anstehenden Saisonstart zu reduzieren und eine optimale Vorbereitung auf die kommende Spielzeit zu gewährleisten. Der Sportdirektor bestätigte diese Maßnahme am heutigen Tage und betonte, dass die Regeneration und Gesundheit der Mannschaft derzeit oberste Priorität haben.</p>
-            </div>
-        </div>
-        <div class="news-item">
-            <div class="news-headline" onclick="toggleDetails('news2')">21.07.2025 - Marijo Mandžukić übernimmt das Traineramt</div>
-            <div id="news2" class="news-details">
-                <p>Der ehemalige Profi-Fußballer Marijo Mandžukić übernimmt ab sofort das Traineramt bei den Kölner Drachen. Nach einer längeren Phase des Wartens ist die Suche nach einem neuen Cheftrainer damit erfolgreich abgeschlossen. Mandžukić kann bereits auf beachtliche Erfolge als Trainer zurückblicken – so führte er den Verein Dinamo Dortmund zum Gewinn der UEFA Conference League. Nun soll er seine Erfahrung und Leidenschaft an der Seitenlinie auch in Köln einbringen und die Mannschaft auf die kommenden Herausforderungen vorbereiten.</p>
-            </div>
-        </div>
-        <div class="news-item">
-            <div class="news-headline" onclick="toggleDetails('news3')">27.07.2025 - Kölner Drachen treffen im DFB-Pokal auf Arminia Bielefeld</div>
-            <div id="news3" class="news-details">
-                <p>Die DFL hat heute die Termine für die kommende Runde im DFB-Pokal bekanntgegeben. In der ersten Runde treffen die Kölner Drachen auf Arminia Bielefeld – ein spannendes Duell, das zugleich das erste Pflichtspiel unter dem neuen Cheftrainer Marijo Mandžukić sein wird. Die Partie findet am 28.07.2025 statt. Beide Mannschaften werden alles daransetzen, einen erfolgreichen Start in den Pokalwettbewerb zu erwischen.</p>
-            </div>
-        </div>
-        <div class="news-item">
-            <div class="news-headline" onclick="toggleDetails('news4')">27.07.2025 - Spielplan bis 26.10.2025 festgelegt</div>
-            <div id="news4" class="news-details">
-                <p>Neben den Terminen für den DFB-Pokal hat die DFL heute auch den offiziellen Spielplan der 2. Bundesliga bekanntgegeben. Die Kölner Drachen starten dabei mit einem Heimspiel in die neue Saison: Zum Auftakt empfängt das Team in der Lanxess Arena den 1. FC Kaiserslautern. Nur eine Woche später steht bereits das erste Auswärtsspiel an – dann gastieren die Drachen beim Hamburger SV im traditionsreichen Volksparkstadion.</p>
-            </div>
-        </div>
-        <div class="news-item">
-            <div class="news-headline" onclick="toggleDetails('news5')">28.07.2025 - Kölner Drachen feiern klaren 4:0-Erfolg im DFB-Pokal gegen Arminia Bielefeld</div>
-            <div id="news5" class="news-details">
-                <p>Als bei der DFB-Pokal-Auslosung die Arminia Bielefeld als Gegner der Kölner Drachen gezogen wurde, zeigte sich Cheftrainer Marijo Mandžukić erleichtert. „Vor dem Ligastart ist es wichtig, einen machbaren, aber dennoch ernstzunehmenden Gegner zu haben“, so Mandžukić damals.</p>
-                <p>Trotz dieser Erleichterung war unklar, wie sich das Team im ersten Pflichtspiel präsentieren würde – vor allem, da die Drachen in der Saisonvorbereitung bewusst auf Trainingslager und Testspiele verzichtet hatten, um die Belastung gering zu halten. Die Arminia hingegen absolvierte ein intensives Trainingslager in Österreich und galt daher als eingespielter.</p>
-                <p>Doch am 28.07.2025 zeigten die Kölner Drachen im heimischen Stadion eine überzeugende Leistung. Mit einem klaren 4:0-Sieg sicherte sich die Mannschaft nicht nur den Einzug in die nächste Runde, sondern auch ein wichtiges Zeichen der Hoffnung und Aufbruchsstimmung für die neue Saison.</p>
-                <p>Nach dem Abpfiff stellte sich Kapitän Simon Straudi den Fragen der Presse. Auf die Frage, wie es nach diesem starken Auftritt weitergehen soll, antwortete er:</p>
-                <p>„So ein Spiel gibt uns natürlich Selbstvertrauen, aber wir dürfen uns darauf nicht ausruhen. Es war ein guter Start, mehr nicht. Jetzt heißt es, weiter hart zu arbeiten, unsere Abläufe zu verbessern und als Team noch enger zusammenzurücken. Wir haben gezeigt, was möglich ist, wenn jeder für den anderen läuft – und genau da wollen wir anknüpfen.“</p>
-                <p>Mit diesem Statement machte Straudi deutlich, dass der Fokus bereits auf den kommenden Aufgaben liegt – in der Liga und im Pokal. Der Sieg gegen Bielefeld war mehr als nur ein Pflichtsieg: Er war ein erster Schritt in eine neue, vielversprechende Ära unter Trainer Marijo Mandžukić.</p>
-            </div>
+            <h3>Kölner Drachen trennen sich 2:2 vom 1. FC Kaiserslautern zum Saisonauftakt</h3>
+            <p><strong>Datum:</strong> 04.08.2025</p>
+            <p>Zum Auftakt der neuen 2. Bundesliga-Saison trennten sich die Kölner Drachen in der heimischen Lanxess Arena mit einem 2:2-Unentschieden vom 1. FC Kaiserslautern. In einer intensiven Partie zeigten beide Teams großen Einsatz, doch am Ende blieb es bei einer leistungsgerechten Punkteteilung.</p>
+            <p>Die Drachen erwischten einen Traumstart: Bereits in der 9. Minute brachte Stürmer Francesco Camarda die Gastgeber mit 1:0 in Führung – nach einem schönen Angriff über die rechte Seite. Das frühe Tor sorgte für Euphorie bei den Fans, doch die Gäste kamen noch vor der Pause zurück. Nach einer Ecke in der 36. Minute traf Ragnar Ache per Kopf zum 1:1-Ausgleich. Torwart Dennis Seimen sah bei dieser Aktion unglücklich aus. Mit diesem Ergebnis ging es in die Halbzeitpause.</p>
+            <p>Nach dem Seitenwechsel reagierte Trainer Marijo Mandžukić und brachte in der 50. Minute Rayan Cherki für Rigg, um neuen Schwung in die Offensive zu bringen. Trotz mehr Spielkontrolle blieb es zunächst beim 1:1, bis Mandžukić in der 76. Minute erneut wechselte: Dean Huijsen kam für Vuskovic in die Partie.</p>
+            <p>Nur zwei Minuten später geriet der eingewechselte Verteidiger allerdings unglücklich in den Mittelpunkt. Philipp Klement nutzte einen Stellungsfehler von Huijsen aus, zog vorbei und traf in der 78. Minute zur 2:1-Führung für Kaiserslautern. Doch Huijsen machte seinen Fehler umgehend wieder gut: In der 80. Minute erzielte er nach einem Freistoß den Ausgleich zum 2:2 – zugleich der Endstand einer spannenden Partie.</p>
         </div>
 
-        <h3>Frauenmannschaft</h3>
         <div class="news-item">
-            <div class="news-headline" onclick="toggleDetails('news6')">14.07.2025 - Kölner Drachen Frauen suchen Verstärkung</div>
-            <div id="news6" class="news-details">
-                <p>Die Kölner Drachen sind derzeit aktiv auf der Suche nach fußballbegeisterten Persönlichkeiten, die das Team im Bereich Scouting sowie in verschiedenen Trainerfunktionen verstärken möchten. Gesucht werden unter anderem engagierte Co-Trainer:innen und Assistenztrainer:innen, die ihre Leidenschaft für den Fußball in die Weiterentwicklung der Mannschaft einbringen möchten.</p>
-            </div>
-        </div>
-        <div class="news-item">
-            <div class="news-headline" onclick="toggleDetails('news7')">01.08.2025 - Kölner Drachen bekommen es mit dem FC Bayern München zu tun</div>
-            <div id="news7" class="news-details">
-                <p>Die Kölner Drachen-Frauen starten mit einem echten Highlight in die neue Saison der Google Pixel Frauen-Bundesliga (GPFBL). Zum Auftakt empfängt das Team von Cheftrainer Daris Jean-Baptiste den FC Bayern München in der heimischen Lanxess Arena. Nur eine Woche später folgt das erste Auswärtsspiel beim SV Werder Bremen.</p>
-                <p>„Wir wollen mutig und leidenschaftlich auftreten und zeigen, dass mit uns zu rechnen ist“, so Trainer Daris Jean-Baptiste über den bevorstehenden Saisonstart.</p>
-            </div>
-        </div>
-        <div class="news-item">
-            <div class="news-headline" onclick="toggleDetails('news8')">10.08.2025 - Kölner Drachinnen reisen ins Trainingslager in die Vereinigten Staaten</div>
-            <div id="news8" class="news-details">
-                <p>Am 10.08.2025 bestätigte der Verein offiziell, dass die Kölner Drachinnen an einem internationalen Vorbereitungsturnier in den Vereinigten Staaten teilnehmen werden. Das Team von Cheftrainer Daris Jean-Baptiste nutzt das Turnier, um sich optimal auf die kommende Saison in der Google Pixel Frauen-Bundesliga vorzubereiten und internationale Erfahrung zu sammeln.</p>
-                <p>Im Rahmen des Turniers treffen die Drachinnen in der ersten Runde auf namhafte Gegner: Leicester City, Liverpool FC und den Sevilla FC. Den Auftakt bestreiten sie am 17.08.2025 gegen Leicester City.</p>
-                <p>Die Mannschaft freut sich auf die Reise und die Chance, sich auf internationaler Bühne zu beweisen. Fans können die Begegnungen live verfolgen – also unbedingt einschalten und die Drachinnen unterstützen!</p>
-            </div>
+            <h3>Kölner Drachen gewinnen Pflichtspiel gegen Arminia Bielefeld</h3>
+            <p><strong>Datum:</strong> 28.07.2025</p>
+            <p>Die Kölner Drachen haben ihr erstes Pflichtspiel der Saison gegen Arminia Bielefeld mit 4:0 gewonnen. Die Mannschaft zeigte eine starke Leistung und überzeugte vor allem durch ihre Offensivkraft. Tore erzielten Francesco Camarda, Rayan Cherki, Dean Huijsen und Antonio Nusa.</p>
         </div>
     </section>
+
     <footer>
         <p>&copy; 2025 Kölner Drachen e.V. | <a href="index.html#impressum" style="color: white;">Impressum</a> | <a href="Datenschutz.html" style="color: white;">Datenschutz</a> | <a href="AGB.html" style="color: white;">AGB</a></p>
     </footer>
-    <script>
-        function toggleDetails(newsId) {
-            const details = document.getElementById(newsId);
-            if (details.style.display === "block") {
-                details.style.display = "none";
-            } else {
-                // Schließe alle anderen Details
-                document.querySelectorAll('.news-details').forEach(item => item.style.display = "none");
-                details.style.display = "block";
-            }
-        }
-    </script>
 </body>
 </html>
