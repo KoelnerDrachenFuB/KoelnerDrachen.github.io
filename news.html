@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aktuelle News des Fußballvereins Kölner Drachen aus Köln.">
-    <meta name="keywords" content="Kölner Drachen, News, Fußball, Köln, Ergebnisse">
+    <meta name="description" content="Detaillierte News des Fußballvereins Kölner Drachen aus Köln.">
+    <meta name="keywords" content="Kölner Drachen, News, Fußball, Köln">
     <meta name="author" content="Kölner Drachen e.V.">
     <title>Kölner Drachen - News</title>
     <style>
@@ -14,10 +14,13 @@
         nav ul li { display: inline; margin: 0 15px; }
         nav ul li a { color: white; text-decoration: none; }
         section { padding: 20px; margin: 10px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .news-item { margin-bottom: 10px; }
+        .news-headline { cursor: pointer; font-weight: bold; color: #006400; padding: 10px; border-bottom: 1px solid #ddd; }
+        .news-headline:hover { background-color: #f0f0f0; }
+        .news-details { display: none; padding: 10px; background-color: #f9f9f9; margin-top: 5px; }
+        .news-details p { margin: 0 0 10px 0; }
         footer { background-color: #006400; color: white; text-align: center; padding: 10px; }
         #logo { width: 100px; height: auto; margin: 10px auto; display: block; }
-        .news-item { margin-bottom: 20px; }
-        .news-item h3 { color: #006400; }
     </style>
 </head>
 <body>
@@ -35,45 +38,102 @@
             </ul>
         </nav>
     </header>
-
     <section>
+        <h2>Aktuelle News</h2>
+
+        <h3>Herrenmannschaft</h3>
         <div class="news-item">
-            <h3>Kölner Drachinnen unterliegen Leicester City zum Auftakt der USA-Reise</h3>
-            <p><strong>Datum:</strong> 17.08.2025</p>
-            <p>Die Kölner Drachinnen sind mit einer knappen 1:2-Niederlage gegen Leicester City in ihr Vorbereitungsturnier in den Vereinigten Staaten gestartet. Trotz einer engagierten Leistung musste sich das Team von Cheftrainer Daris Jean-Baptiste im ersten Spiel der US-Reise geschlagen geben.</p>
-            <p>Leicester erwischte den besseren Start und ging in der 37. Minute durch Graf mit 1:0 in Führung – gleichzeitig auch der Halbzeitstand. Nach dem Seitenwechsel fanden die Drachinnen besser ins Spiel und belohnten sich in der 72. Minute, als Müller nach einem schönen Angriff den Ausgleich zum 1:1 erzielte.</p>
-            <p>Die Freude währte allerdings nur kurz: Bereits zwei Minuten später traf Cain für Leicester City zum 1:2-Endstand. Trotz einer starken kämpferischen Leistung blieb den Drachinnen am Ende der verdiente Lohn verwehrt.</p>
-            <p>“Wir sind natürlich enttäuscht, weil wir uns mehr vorgenommen hatten. Aber die Art und Weise, wie wir nach der Pause aufgetreten sind, stimmt mich positiv. Das war ein Schritt in die richtige Richtung”, sagte Trainer Daris Jean-Baptiste nach dem Spiel.</p>
-            <p>Die Kölner Drachinnen haben nun einige Tage Zeit, um sich auf das nächste Spiel gegen Liverpool FC vorzubereiten. Ziel ist es, im zweiten Gruppenspiel die ersten Punkte der USA-Reise einzufahren.</p>
+            <div class="news-headline" onclick="toggleDetails('news1')">13.08.2025 - Kölner Drachen überraschen den HSV – 2:0-Auswärtssieg im Volksparkstadion</div>
+            <div id="news1" class="news-details">
+                <p>Eigentlich gingen die meisten Beobachter davon aus, dass der Hamburger SV seiner Favoritenrolle gerecht werden würde. Doch die Kölner Drachen belehrten alle eines Besseren und feierten im Volksparkstadion einen beeindruckenden 2:0-Auswärtserfolg.</p>
+                <p>Lange Zeit sah alles nach einem typischen Spielverlauf aus: Der HSV kontrollierte Ball und Tempo, während die Drachen defensiv kompakt standen und auf Konter lauerten. Doch in der 68. Minute änderte sich das Bild schlagartig – nach einem präzisen Pass von Liso schob Francesco Camarda eiskalt zum 1:0 für Köln ein.</p>
+                <p>Nur sieben Minuten später sorgte Smit für die Entscheidung: In der 75. Minute nutzte er eine Unachtsamkeit in der Hamburger Hintermannschaft und erhöhte auf 2:0. Der HSV fand darauf keine Antwort mehr, und die Drachen brachten den Sieg souverän über die Zeit.</p>
+                <p>Am Ende stand ein unerwarteter, aber verdienter Erfolg für die Mannschaft von Cheftrainer Marijo Mandžukić, die damit ihren ersten Saisonsieg einfährt und eindrucksvoll zeigt, dass mit ihr in dieser Saison zu rechnen ist.</p>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-headline" onclick="toggleDetails('news2')">04.08.2025 - Kölner Drachen trennen sich 2:2 vom 1. FC Kaiserslautern zum Saisonauftakt</div>
+            <div id="news2" class="news-details">
+                <p>Zum Auftakt der neuen 2. Bundesliga-Saison trennten sich die Kölner Drachen in der heimischen Lanxess Arena mit einem 2:2-Unentschieden vom 1. FC Kaiserslautern. In einer intensiven Partie zeigten beide Teams großen Einsatz, doch am Ende blieb es bei einer leistungsgerechten Punkteteilung.</p>
+                <p>Die Drachen erwischten einen Traumstart: Bereits in der 9. Minute brachte Stürmer Francesco Camarda die Gastgeber mit 1:0 in Führung – nach einem schönen Angriff über die rechte Seite. Das frühe Tor sorgte für Euphorie bei den Fans, doch die Gäste kamen noch vor der Pause zurück. Nach einer Ecke in der 36. Minute traf Ragnar Ache per Kopf zum 1:1-Ausgleich. Torwart Dennis Seimen sah bei dieser Aktion unglücklich aus. Mit diesem Ergebnis ging es in die Halbzeitpause.</p>
+                <p>Nach dem Seitenwechsel reagierte Trainer Marijo Mandžukić und brachte in der 50. Minute Rayan Cherki für Rigg, um neuen Schwung in die Offensive zu bringen. Trotz mehr Spielkontrolle blieb es zunächst beim 1:1, bis Mandžukić in der 76. Minute erneut wechselte: Dean Huijsen kam für Vuskovic in die Partie.</p>
+                <p>Nur zwei Minuten später geriet der eingewechselte Verteidiger allerdings unglücklich in den Mittelpunkt. Philipp Klement nutzte einen Stellungsfehler von Huijsen aus, zog vorbei und traf in der 78. Minute zur 2:1-Führung für Kaiserslautern. Doch Huijsen machte seinen Fehler umgehend wieder gut: In der 80. Minute erzielte er nach einem Freistoß den Ausgleich zum 2:2 – zugleich der Endstand einer spannenden Partie.</p>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-headline" onclick="toggleDetails('news3')">28.07.2025 - Kölner Drachen gewinnen Pflichtspiel gegen Arminia Bielefeld</div>
+            <div id="news3" class="news-details">
+                <p>Die Kölner Drachen haben ihr erstes Pflichtspiel der Saison gegen Arminia Bielefeld mit 4:0 gewonnen. Die Mannschaft zeigte eine starke Leistung und überzeugte vor allem durch ihre Offensivkraft. Tore erzielten Francesco Camarda, Rayan Cherki, Dean Huijsen und Antonio Nusa.</p>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-headline" onclick="toggleDetails('news4')">27.07.2025 - Kölner Drachen treffen im DFB-Pokal auf Arminia Bielefeld</div>
+            <div id="news4" class="news-details">
+                <p>Die DFL hat heute die Termine für die kommende Runde im DFB-Pokal bekanntgegeben. In der ersten Runde treffen die Kölner Drachen auf Arminia Bielefeld – ein spannendes Duell, das zugleich das erste Pflichtspiel unter dem neuen Cheftrainer Marijo Mandžukić sein wird. Die Partie findet am 28.07.2025 statt. Beide Mannschaften werden alles daransetzen, einen erfolgreichen Start in den Pokalwettbewerb zu erwischen.</p>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-headline" onclick="toggleDetails('news5')">27.07.2025 - Spielplan bis 26.10.2025 festgelegt</div>
+            <div id="news5" class="news-details">
+                <p>Neben den Terminen für den DFB-Pokal hat die DFL heute auch den offiziellen Spielplan der 2. Bundesliga bekanntgegeben. Die Kölner Drachen starten dabei mit einem Heimspiel in die neue Saison: Zum Auftakt empfängt das Team in der Lanxess Arena den 1. FC Kaiserslautern. Nur eine Woche später steht bereits das erste Auswärtsspiel an – dann gastieren die Drachen beim Hamburger SV im traditionsreichen Volksparkstadion.</p>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-headline" onclick="toggleDetails('news6')">21.07.2025 - Marijo Mandžukić übernimmt das Traineramt</div>
+            <div id="news6" class="news-details">
+                <p>Der ehemalige Profi-Fußballer Marijo Mandžukić übernimmt ab sofort das Traineramt bei den Kölner Drachen. Nach einer längeren Phase des Wartens ist die Suche nach einem neuen Cheftrainer damit erfolgreich abgeschlossen. Mandžukić kann bereits auf beachtliche Erfolge als Trainer zurückblicken – so führte er den Verein Dinamo Dortmund zum Gewinn der UEFA Conference League. Nun soll er seine Erfahrung und Leidenschaft an der Seitenlinie auch in Köln einbringen und die Mannschaft auf die kommenden Herausforderungen vorbereiten.</p>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-headline" onclick="toggleDetails('news7')">01.07.2025 - Kölner Drachen lehnen Vorbereitungsturnier ab</div>
+            <div id="news7" class="news-details">
+                <p>Der Verein gibt hiermit offiziell bekannt, dass er nicht am Vorbereitungsturnier in Südkorea teilnehmen wird. Diese Entscheidung wurde getroffen, um die Belastung der Spieler vor dem anstehenden Saisonstart zu reduzieren und eine optimale Vorbereitung auf die kommende Spielzeit zu gewährleisten. Der Sportdirektor bestätigte diese Maßnahme am heutigen Tage und betonte, dass die Regeneration und Gesundheit der Mannschaft derzeit oberste Priorität haben.</p>
+            </div>
         </div>
 
+        <h3>Frauenmannschaft</h3>
         <div class="news-item">
-            <h3>Kölner Drachen überraschen den HSV – 2:0-Auswärtssieg im Volksparkstadion</h3>
-            <p><strong>Datum:</strong> 13.08.2025</p>
-            <p>Eigentlich gingen die meisten Beobachter davon aus, dass der Hamburger SV seiner Favoritenrolle gerecht werden würde. Doch die Kölner Drachen belehrten alle eines Besseren und feierten im Volksparkstadion einen beeindruckenden 2:0-Auswärtserfolg.</p>
-            <p>Lange Zeit sah alles nach einem typischen Spielverlauf aus: Der HSV kontrollierte Ball und Tempo, während die Drachen defensiv kompakt standen und auf Konter lauerten. Doch in der 68. Minute änderte sich das Bild schlagartig – nach einem präzisen Pass von Liso schob Francesco Camarda eiskalt zum 1:0 für Köln ein.</p>
-            <p>Nur sieben Minuten später sorgte Smit für die Entscheidung: In der 75. Minute nutzte er eine Unachtsamkeit in der Hamburger Hintermannschaft und erhöhte auf 2:0. Der HSV fand darauf keine Antwort mehr, und die Drachen brachten den Sieg souverän über die Zeit.</p>
-            <p>Am Ende stand ein unerwarteter, aber verdienter Erfolg für die Mannschaft von Cheftrainer Marijo Mandžukić, die damit ihren ersten Saisonsieg einfährt und eindrucksvoll zeigt, dass mit ihr in dieser Saison zu rechnen ist.</p>
+            <div class="news-headline" onclick="toggleDetails('news8')">17.08.2025 - Kölner Drachinnen unterliegen Leicester City zum Auftakt der USA-Reise</div>
+            <div id="news8" class="news-details">
+                <p>Die Kölner Drachinnen sind mit einer knappen 1:2-Niederlage gegen Leicester City in ihr Vorbereitungsturnier in den Vereinigten Staaten gestartet. Trotz einer engagierten Leistung musste sich das Team von Cheftrainer Daris Jean-Baptiste im ersten Spiel der US-Reise geschlagen geben. Leicester erwischte den besseren Start und ging in der 37. Minute durch Graf mit 1:0 in Führung – gleichzeitig auch der Halbzeitstand. Nach dem Seitenwechsel fanden die Drachinnen besser ins Spiel und belohnten sich in der 72. Minute, als Müller nach einem schönen Angriff den Ausgleich zum 1:1 erzielte. Die Freude währte allerdings nur kurz: Bereits zwei Minuten später traf Cain für Leicester City zum 1:2-Endstand. Trotz einer starken kämpferischen Leistung blieb den Drachinnen am Ende der verdiente Lohn verwehrt. „Wir sind natürlich enttäuscht, weil wir uns mehr vorgenommen hatten. Aber die Art und Weise, wie wir nach der Pause aufgetreten sind, stimmt mich positiv. Das war ein Schritt in die richtige Richtung“, sagte Trainer Daris Jean-Baptiste nach dem Spiel. Die Kölner Drachinnen haben nun einige Tage Zeit, um sich auf das nächste Spiel gegen Liverpool FC vorzubereiten. Ziel ist es, im zweiten Gruppenspiel die ersten Punkte der USA-Reise einzufahren.</p>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-headline" onclick="toggleDetails('news9')">10.08.2025 - Kölner Drachinnen reisen ins Trainingslager in die Vereinigten Staaten</div>
+            <div id="news9" class="news-details">
+                <p>Am 10.08.2025 bestätigte der Verein offiziell, dass die Kölner Drachinnen an einem internationalen Vorbereitungsturnier in den Vereinigten Staaten teilnehmen werden. Das Team von Cheftrainer Daris Jean-Baptiste nutzt das Turnier, um sich optimal auf die kommende Saison in der Google Pixel Frauen-Bundesliga vorzubereiten und internationale Erfahrung zu sammeln. Im Rahmen des Turniers treffen die Drachinnen in der ersten Runde auf namhafte Gegner: Leicester City, Liverpool FC und den Sevilla FC. Den Auftakt bestreiten sie am 17.08.2025 gegen Leicester City. Die Mannschaft freut sich auf die Reise und die Chance, sich auf internationaler Bühne zu beweisen. Fans können die Begegnungen live verfolgen – also unbedingt einschalten und die Drachinnen unterstützen!</p>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-headline" onclick="toggleDetails('news10')">01.08.2025 - Kölner Drachen bekommen es mit dem FC Bayern München zu tun</div>
+            <div id="news10" class="news-details">
+                <p>Die Kölner Drachen-Frauen starten mit einem echten Highlight in die neue Saison der Google Pixel Frauen-Bundesliga (GPFBL). Zum Auftakt empfängt das Team von Cheftrainer Daris Jean-Baptiste den FC Bayern München in der heimischen Lanxess Arena. Nur eine Woche später folgt das erste Auswärtsspiel beim SV Werder Bremen. „Wir wollen mutig und leidenschaftlich auftreten und zeigen, dass mit uns zu rechnen ist“, so Trainer Daris Jean-Baptiste über den bevorstehenden Saisonstart.</p>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-headline" onclick="toggleDetails('news11')">14.07.2025 - Kölner Drachen Frauen suchen Verstärkung</div>
+            <div id="news11" class="news-details">
+                <p>Die Kölner Drachen sind derzeit aktiv auf der Suche nach fußballbegeisterten Persönlichkeiten, die das Team im Bereich Scouting sowie in verschiedenen Trainerfunktionen verstärken möchten. Gesucht werden unter anderem engagierte Co-Trainer:innen und Assistenztrainer:innen, die ihre Leidenschaft für den Fußball in die Weiterentwicklung der Mannschaft einbringen möchten.</p>
+            </div>
         </div>
 
-        <div class="news-item">
-            <h3>Kölner Drachen trennen sich 2:2 vom 1. FC Kaiserslautern zum Saisonauftakt</h3>
-            <p><strong>Datum:</strong> 04.08.2025</p>
-            <p>Zum Auftakt der neuen 2. Bundesliga-Saison trennten sich die Kölner Drachen in der heimischen Lanxess Arena mit einem 2:2-Unentschieden vom 1. FC Kaiserslautern. In einer intensiven Partie zeigten beide Teams großen Einsatz, doch am Ende blieb es bei einer leistungsgerechten Punkteteilung.</p>
-            <p>Die Drachen erwischten einen Traumstart: Bereits in der 9. Minute brachte Stürmer Francesco Camarda die Gastgeber mit 1:0 in Führung – nach einem schönen Angriff über die rechte Seite. Das frühe Tor sorgte für Euphorie bei den Fans, doch die Gäste kamen noch vor der Pause zurück. Nach einer Ecke in der 36. Minute traf Ragnar Ache per Kopf zum 1:1-Ausgleich. Torwart Dennis Seimen sah bei dieser Aktion unglücklich aus. Mit diesem Ergebnis ging es in die Halbzeitpause.</p>
-            <p>Nach dem Seitenwechsel reagierte Trainer Marijo Mandžukić und brachte in der 50. Minute Rayan Cherki für Rigg, um neuen Schwung in die Offensive zu bringen. Trotz mehr Spielkontrolle blieb es zunächst beim 1:1, bis Mandžukić in der 76. Minute erneut wechselte: Dean Huijsen kam für Vuskovic in die Partie.</p>
-            <p>Nur zwei Minuten später geriet der eingewechselte Verteidiger allerdings unglücklich in den Mittelpunkt. Philipp Klement nutzte einen Stellungsfehler von Huijsen aus, zog vorbei und traf in der 78. Minute zur 2:1-Führung für Kaiserslautern. Doch Huijsen machte seinen Fehler umgehend wieder gut: In der 80. Minute erzielte er nach einem Freistoß den Ausgleich zum 2:2 – zugleich der Endstand einer spannenden Partie.</p>
-        </div>
-
-        <div class="news-item">
-            <h3>Kölner Drachen gewinnen Pflichtspiel gegen Arminia Bielefeld</h3>
-            <p><strong>Datum:</strong> 28.07.2025</p>
-            <p>Die Kölner Drachen haben ihr erstes Pflichtspiel der Saison gegen Arminia Bielefeld mit 4:0 gewonnen. Die Mannschaft zeigte eine starke Leistung und überzeugte vor allem durch ihre Offensivkraft. Tore erzielten Francesco Camarda, Rayan Cherki, Dean Huijsen und Antonio Nusa.</p>
-        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Kölner Drachen e.V. | <a href="index.html#impressum" style="color: white;">Impressum</a> | <a href="Datenschutz.html" style="color: white;">Datenschutz</a> | <a href="AGB.html" style="color: white;">AGB</a></p>
     </footer>
+
+    <script>
+        function toggleDetails(newsId) {
+            const details = document.getElementById(newsId);
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                // Schließe alle anderen Details
+                document.querySelectorAll('.news-details').forEach(item => item.style.display = "none");
+                details.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
