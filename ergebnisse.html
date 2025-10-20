@@ -14,14 +14,19 @@
         nav ul li { display: inline; margin: 0 15px; }
         nav ul li a { color: white; text-decoration: none; }
         section { padding: 20px; margin: 10px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #006400; color: white; cursor: pointer; }
-        th:hover { background-color: #004d00; }
-        .played { background-color: #90ee90; } /* Grün für gespielte Spiele */
-        .upcoming { background-color: #f0f0f0; } /* Grau für kommende Spiele */
+        .game-item { margin-bottom: 10px; }
+        .game-headline { cursor: pointer; font-weight: bold; color: #006400; padding: 10px; border-bottom: 1px solid #ddd; }
+        .game-headline:hover { background-color: #f0f0f0; }
+        .game-details { display: none; padding: 10px; background-color: #f9f9f9; margin-top: 5px; }
+        .game-details table { width: 100%; border-collapse: collapse; }
+        .game-details th, .game-details td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .game-details .draw { background-color: #f0f0f0; } /* Grau für Unentschieden */
+        .game-details .win { background-color: #90ee90; } /* Grün für Siege */
+        .game-details .loss { background-color: #ff6347; } /* Rot für Niederlagen */
+        .game-details .upcoming { background-color: #ffffff; } /* Weiß für kommende Spiele */
         footer { background-color: #006400; color: white; text-align: center; padding: 10px; }
         #logo { width: 100px; height: auto; margin: 10px auto; display: block; }
+        iframe { width: 100%; height: 300px; border: none; }
     </style>
 </head>
 <body>
@@ -34,69 +39,160 @@
                 <li><a href="news.html">News</a></li>
                 <li><a href="index.html#ueber-uns">Über uns</a></li>
                 <li><a href="index.html#mannschaften">Mannschaften</a></li>
-                <li><a href="index.html#spielplan">Spielplan</a></li>
-                <li><a href="ergebnisse.html">Ergebnisse</a></li>
+                <li><a href="ergebnisse.html">Ergebnisse & Spielplan</a></li>
             </ul>
         </nav>
     </header>
-
     <section>
-        <h2>Ergebnisse & Spielplan (Herren)</h2>
-        <table id="herrenResults">
-            <thead>
-                <tr>
-                    <th onclick="sortTable('herrenResults', 0)">Datum</th>
-                    <th onclick="sortTable('herrenResults', 1)">Heim/Auswärts</td>
-                    <th onclick="sortTable('herrenResults', 2)">Gegner</th>
-                    <th onclick="sortTable('herrenResults', 3)">Uhrzeit</th>
-                    <th onclick="sortTable('herrenResults', 4)">Ort</th>
-                    <th onclick="sortTable('herrenResults', 5)">Ergebnis</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="played"><td>28.07.2025</td><td>Heim</td><td>Arminia Bielefeld</td><td>15:00</td><td>Lanxess Arena</td><td>4:0</td></tr>
-                <tr class="played"><td>04.08.2025</td><td>Heim</td><td>1. FC Kaiserslautern</td><td>15:00</td><td>Lanxess Arena</td><td>2:2</td></tr>
-                <tr class="played"><td>11.08.2025</td><td>Auswärts</td><td>Hamburger SV</td><td>15:00</td><td>Volksparkstadion</td><td>2:0</td></tr>
-                <tr class="upcoming"><td>17.08.2025</td><td>Heim</td><td>FC Schalke 04</td><td>15:00</td><td>Lanxess Arena</td><td>-</td></tr>
-                <tr class="upcoming"><td>23.08.2025</td><td>Auswärts</td><td>Hertha BSC</td><td>15:00</td><td>Olympiastadion</td><td>-</td></tr>
-                <tr class="upcoming"><td>30.08.2025</td><td>Heim</td><td>Preußen Münster</td><td>15:00</td><td>Lanxess Arena</td><td>-</td></tr>
-                <tr class="upcoming"><td>14.09.2025</td><td>Auswärts</td><td>1. FC Köln</td><td>15:00</td><td>RheinEnergieSTADION</td><td>-</td></tr>
-                <tr class="upcoming"><td>22.09.2025</td><td>Auswärts</td><td>SV Elversberg</td><td>15:00</td><td>URSAPHARM-Arena</td><td>-</td></tr>
-                <tr class="upcoming"><td>28.09.2025</td><td>Heim</td><td>Hannover 96</td><td>15:00</td><td>Lanxess Arena</td><td>-</td></tr>
-                <tr class="upcoming"><td>05.10.2025</td><td>Auswärts</td><td>SSV Ulm 1846</td><td>15:00</td><td>Donaustadion</td><td>-</td></tr>
-                <tr class="upcoming"><td>20.10.2025</td><td>Heim</td><td>Eintracht Braunschweig</td><td>15:00</td><td>Lanxess Arena</td><td>-</td></tr>
-                <tr class="upcoming"><td>26.10.2025</td><td>Auswärts</td><td>1. FC Nürnberg</td><td>15:00</td><td>Max-Morlock-Stadion</td><td>-</td></tr>
-            </tbody>
-        </table>
+        <h2>Ergebnisse & Spielplan</h2>
 
-        <h2>Ergebnisse & Spielplan (Frauen)</h2>
-        <table id="frauenResults">
-            <thead>
-                <tr>
-                    <th onclick="sortTable('frauenResults', 0)">Datum</th>
-                    <th onclick="sortTable('frauenResults', 1)">Heim/Auswärts</th>
-                    <th onclick="sortTable('frauenResults', 2)">Gegner</th>
-                    <th onclick="sortTable('frauenResults', 3)">Uhrzeit</th>
-                    <th onclick="sortTable('frauenResults', 4)">Ort</th>
-                    <th onclick="sortTable('frauenResults', 5)">Wettbewerb</th>
-                    <th onclick="sortTable('frauenResults', 6)">Ergebnis</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="played"><td>17.08.2025</td><td>Auswärts</td><td>Leicester City</td><td>15:00</td><td>Chase Stadium</td><td>United Tournament</td><td>1:2</td></tr>
-                <tr class="upcoming"><td>21.08.2025</td><td>Auswärts</td><td>Liverpool FC</td><td>15:00</td><td>Chase Stadium</td><td>United Tournament</td><td>-</td></tr>
-                <tr class="upcoming"><td>25.08.2025</td><td>Auswärts</td><td>Sevilla FC</td><td>15:00</td><td>Chase Stadium</td><td>United Tournament</td><td>-</td></tr>
-                <tr class="upcoming"><td>30.08.2025</td><td>Heim</td><td>FC Bayern München</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td><td>-</td></tr>
-                <tr class="upcoming"><td>15.09.2025</td><td>Auswärts</td><td>Werder Bremen</td><td>15:00</td><td>Weserstadion</td><td>Bundesliga</td><td>-</td></tr>
-                <tr class="upcoming"><td>21.09.2025</td><td>Heim</td><td>Eintracht Frankfurt</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td><td>-</td></tr>
-                <tr class="upcoming"><td>28.09.2025</td><td>Heim</td><td>RB Leipzig</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td><td>-</td></tr>
-                <tr class="upcoming"><td>04.10.2025</td><td>Auswärts</td><td>SC Freiburg</td><td>15:00</td><td>Dreisamstadion</td><td>Bundesliga</td><td>-</td></tr>
-                <tr class="upcoming"><td>09.10.2025</td><td>Heim</td><td>Real Madrid</td><td>18:00</td><td>Lanxess Arena</td><td>UEFA Women's Champions League</td><td>-</td></tr>
-                <tr class="upcoming"><td>12.10.2025</td><td>Heim</td><td>SGS Essen 1968</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td><td>-</td></tr>
-                <tr class="upcoming"><td>16.10.2025</td><td>Heim</td><td>Chelsea Football Club</td><td>18:00</td><td>Lanxess Arena</td><td>UEFA Women's Champions League</td><td>-</td></tr>
-                <tr class="upcoming"><td>20.10.2025</td><td>Auswärts</td><td>TSG Hoffenheim</td><td>15:00</td><td>Dietmar-Hopp-Stadion</td><td>Bundesliga</td><td>-</td></tr>
-            </tbody>
-        </table>
+        <h3>Herrenmannschaft</h3>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game1')">11.08.2025 - Hamburger SV (Auswärts)</div>
+            <div id="game1" class="game-details">
+                <iframe src="ergebnisse_data.html#game1"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game2')">04.08.2025 - 1. FC Kaiserslautern (Heim)</div>
+            <div id="game2" class="game-details">
+                <iframe src="ergebnisse_data.html#game2"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game3')">28.07.2025 - Arminia Bielefeld (Heim)</div>
+            <div id="game3" class="game-details">
+                <iframe src="ergebnisse_data.html#game3"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game4')">17.08.2025 - FC Schalke 04 (Heim)</div>
+            <div id="game4" class="game-details">
+                <iframe src="spielplan_data.html#game4"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game5')">23.08.2025 - Hertha BSC (Auswärts)</div>
+            <div id="game5" class="game-details">
+                <iframe src="spielplan_data.html#game5"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game6')">30.08.2025 - Preußen Münster (Heim)</div>
+            <div id="game6" class="game-details">
+                <iframe src="spielplan_data.html#game6"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game7')">14.09.2025 - 1. FC Köln (Auswärts)</div>
+            <div id="game7" class="game-details">
+                <iframe src="spielplan_data.html#game7"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game8')">22.09.2025 - SV Elversberg (Auswärts)</div>
+            <div id="game8" class="game-details">
+                <iframe src="spielplan_data.html#game8"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game9')">28.09.2025 - Hannover 96 (Heim)</div>
+            <div id="game9" class="game-details">
+                <iframe src="spielplan_data.html#game9"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game10')">05.10.2025 - SSV Ulm 1846 (Auswärts)</div>
+            <div id="game10" class="game-details">
+                <iframe src="spielplan_data.html#game10"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game11')">20.10.2025 - Eintracht Braunschweig (Heim)</div>
+            <div id="game11" class="game-details">
+                <iframe src="spielplan_data.html#game11"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game12')">26.10.2025 - 1. FC Nürnberg (Auswärts)</div>
+            <div id="game12" class="game-details">
+                <iframe src="spielplan_data.html#game12"></iframe>
+            </div>
+        </div>
+
+        <h3>Frauenmannschaft</h3>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game13')">17.08.2025 - Leicester City (Auswärts)</div>
+            <div id="game13" class="game-details">
+                <iframe src="ergebnisse_data.html#game13"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game14')">21.08.2025 - Liverpool FC (Auswärts)</div>
+            <div id="game14" class="game-details">
+                <iframe src="spielplan_data.html#game14"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game15')">25.08.2025 - Sevilla FC (Auswärts)</div>
+            <div id="game15" class="game-details">
+                <iframe src="spielplan_data.html#game15"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game16')">30.08.2025 - FC Bayern München (Heim)</div>
+            <div id="game16" class="game-details">
+                <iframe src="spielplan_data.html#game16"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game17')">15.09.2025 - Werder Bremen (Auswärts)</div>
+            <div id="game17" class="game-details">
+                <iframe src="spielplan_data.html#game17"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game18')">21.09.2025 - Eintracht Frankfurt (Heim)</div>
+            <div id="game18" class="game-details">
+                <iframe src="spielplan_data.html#game18"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game19')">28.09.2025 - RB Leipzig (Heim)</div>
+            <div id="game19" class="game-details">
+                <iframe src="spielplan_data.html#game19"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game20')">04.10.2025 - SC Freiburg (Auswärts)</div>
+            <div id="game20" class="game-details">
+                <iframe src="spielplan_data.html#game20"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game21')">09.10.2025 - Real Madrid (Heim)</div>
+            <div id="game21" class="game-details">
+                <iframe src="spielplan_data.html#game21"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game22')">12.10.2025 - SGS Essen 1968 (Heim)</div>
+            <div id="game22" class="game-details">
+                <iframe src="spielplan_data.html#game22"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game23')">16.10.2025 - Chelsea Football Club (Heim)</div>
+            <div id="game23" class="game-details">
+                <iframe src="spielplan_data.html#game23"></iframe>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-headline" onclick="toggleDetails('game24')">20.10.2025 - TSG Hoffenheim (Auswärts)</div>
+            <div id="game24" class="game-details">
+                <iframe src="spielplan_data.html#game24"></iframe>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -104,21 +200,15 @@
     </footer>
 
     <script>
-        function sortTable(tableId, columnIndex) {
-            const table = document.getElementById(tableId);
-            const tbody = table.getElementsByTagName('tbody')[0];
-            const rows = Array.from(tbody.getElementsByTagName('tr'));
-
-            rows.sort((a, b) => {
-                const aValue = a.cells[columnIndex].textContent.trim();
-                const bValue = b.cells[columnIndex].textContent.trim();
-                return aValue.localeCompare(bValue, undefined, { numeric: true });
-            });
-
-            while (tbody.firstChild) {
-                tbody.removeChild(tbody.firstChild);
+        function toggleDetails(gameId) {
+            const details = document.getElementById(gameId);
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                // Schließe alle anderen Details
+                document.querySelectorAll('.game-details').forEach(item => item.style.display = "none");
+                details.style.display = "block";
             }
-            rows.forEach(row => tbody.appendChild(row));
         }
     </script>
 </body>
