@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Offizielle Website des Fußballvereins Kölner Drachen aus Köln. Infos zu Teams, Spielplan und Kontakt.">
-    <meta name="keywords" content="Kölner Drachen, Fußball, Köln, Verein, Spielplan, Teams">
+    <meta name="description" content="Offizielle Website des Fußballvereins Kölner Drachen aus Köln.">
+    <meta name="keywords" content="Kölner Drachen, Fußball, Köln, News, Mannschaften, Spielplan, Ergebnisse">
     <meta name="author" content="Kölner Drachen e.V.">
-    <title>Kölner Drachen - Fußballverein Köln</title>
+    <title>Kölner Drachen e.V.</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
         header { background-color: #006400; color: white; padding: 10px; text-align: center; }
@@ -14,221 +14,108 @@
         nav ul li { display: inline; margin: 0 15px; }
         nav ul li a { color: white; text-decoration: none; }
         section { padding: 20px; margin: 10px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #006400; color: white; cursor: pointer; }
-        th:hover { background-color: #004d00; }
-        footer { background-color: #006400; color: white; text-align: center; padding: 10px; }
         #logo { width: 100px; height: auto; margin: 10px auto; display: block; }
-        .news-link { color: #006400; text-decoration: underline; cursor: pointer; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .draw { background-color: #f0f0f0; } /* Grau für Unentschieden */
+        .win { background-color: #90ee90; } /* Grün für Siege */
+        .loss { background-color: #ff6347; } /* Rot für Niederlagen */
+        .upcoming { background-color: #ffffff; } /* Weiß für kommende Spiele */
+        footer { background-color: #006400; color: white; text-align: center; padding: 10px; }
     </style>
 </head>
 <body>
-
     <header>
         <img id="logo" src="Logo.png" alt="Logo der Kölner Drachen">
         <h1>Kölner Drachen e.V.</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
                 <li><a href="#ueber-uns">Über uns</a></li>
                 <li><a href="#mannschaften">Mannschaften</a></li>
-                <li><a href="#spielplan">Spielplan</a></li>
+                <li><a href="#spielplan">Spielplan & Ergebnisse</a></li>
                 <li><a href="news.html">News</a></li>
-                <li><a href="ergebnisse.html">Ergebnisse</a></li>
+                <li><a href="ergebnisse.html">Detaillierte Ergebnisse</a></li>
+                <li><a href="Datenschutz.html">Datenschutz</a></li>
+                <li><a href="AGB.html">AGB</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
-        <h2>Willkommen bei den Kölner Drachen!</h2>
-        <p>Der Fußballverein Kölner Drachen aus Köln steht für Leidenschaft, Fairness und Gemeinschaft. Seit 1994 erobern wir den Rasen mit Drachenflügeln. Werde Teil unserer Familie und erlebe den Spirit mit uns!</p>
-        <h3>Aktuelle News</h3>
-        <p>Klicke hier, um die neuesten Entwicklungen zu erfahren: <a href="news.html" class="news-link">Zum News-Bereich</a>.</p>
-    </section>
-
     <section id="ueber-uns">
         <h2>Über uns</h2>
-        <p>Gegründet im Jahr 1994 in Köln, hat sich der Kölner Drachen zu einem der dynamischsten Fußballvereine der Region entwickelt. Mit über 250 Mitgliedern fördern wir nicht nur Sport, sondern auch Werte wie Teamgeist und Inklusion. Besonders bekannt ist unsere erstklassige Jugendakademie, die jungen Talenten früh die Chance gibt, sich auf dem Platz zu beweisen.</p>
-        <p>Unser Motto: "Drachen fliegen hoch – zusammen unbesiegbar!"</p>
-        <ul>
-            <li><strong>Gründungsjahr:</strong> 1994</li>
-            <li><strong>Mitglieder:</strong> 250+</li>
-            <li><strong>Liga:</strong> 2. Bundesliga (Herren), 1. Bundesliga (Frauen), Jugendmannschaften in Mittelrheinliga</li>
-            <li><strong>Trainingsort:</strong> Sportplatz Drachenfels, Köln</li>
-        </ul>
+        <p>Der Kölner Drachen e.V. ist ein ambitionierter Fußballverein aus Köln, der sich darauf konzentriert, talentierte Spieler und Spielerinnen zu fördern und wettbewerbsfähige Mannschaften in der 2. Bundesliga (Herren) sowie der Google Pixel Frauen-Bundesliga (Frauen) aufzustellen. Unser Ziel ist es, eine leidenschaftliche Fußballkultur zu etablieren und unsere Fans mit spannenden Spielen zu begeistern.</p>
     </section>
 
     <section id="mannschaften">
-        <h2>Unsere Mannschaften</h2>
-        <h3>1. Herrenmannschaft (2. Bundesliga – Trainer: Marijo Mandžukić)</h3>
-        <table id="herrenTable">
-            <thead>
-                <tr>
-                    <th onclick="sortTable('herrenTable', 0)">Nummer</th>
-                    <th onclick="sortTable('herrenTable', 1)">Name</th>
-                    <th onclick="sortTable('herrenTable', 2)">Nationalität</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>1</td><td>Christian Schmidt</td><td>🇩🇪</td></tr>
-                <tr><td>2</td><td>Dennis Seimen</td><td>🇩🇪</td></tr>
-                <tr><td>3</td><td>Niels Simon</td><td>🇩🇪</td></tr>
-                <tr><td>4</td><td>Jonas Schmitz</td><td>🇩🇪</td></tr>
-                <tr><td>5</td><td>Giorgio Scalvini</td><td>🇮🇹</td></tr>
-                <tr><td>6</td><td>Fabian Friedrich</td><td>🇩🇪</td></tr>
-                <tr><td>7</td><td>Rayan Cherki</td><td>🇫🇷</td></tr>
-                <tr><td>8</td><td>Antonio Nusa</td><td>🇳🇴</td></tr>
-                <tr><td>9</td><td>Emil Weber</td><td>🇩🇪</td></tr>
-                <tr><td>10</td><td>Andre Keller</td><td>🇩🇪</td></tr>
-                <tr><td>11</td><td>Leo Graf</td><td>🇩🇪</td></tr>
-                <tr><td>12</td><td>Marco Wagner</td><td>🇩🇪</td></tr>
-                <tr><td>13</td><td>Jona Arnold</td><td>🇩🇪</td></tr>
-                <tr><td>14</td><td>Oier Ramirez</td><td>🇪🇸</td></tr>
-                <tr><td>15</td><td>Johann Jung</td><td>🇩🇪</td></tr>
-                <tr><td>16</td><td>Elis Schäfer</td><td>🇩🇪</td></tr>
-                <tr><td>17</td><td>Linus Frank</td><td>🇩🇪</td></tr>
-                <tr><td>18</td><td>Jan Zimmermann</td><td>🇩🇪</td></tr>
-                <tr><td>19</td><td>Patrik Bengtsson</td><td>🇸🇪</td></tr>
-                <tr><td>20</td><td>Jörg Fontana</td><td>🇨🇭</td></tr>
-                <tr><td>21</td><td>Enis Slilhovic</td><td>🇧🇦</td></tr>
-                <tr><td>22</td><td>Yolan Lang</td><td>🇨🇭</td></tr>
-                <tr><td>23</td><td>Christoph Jansen</td><td>🇩🇪</td></tr>
-                <tr><td>24</td><td>Lio Schuster</td><td>🇩🇪</td></tr>
-                <tr><td>25</td><td>Ariel David</td><td>🇮🇱</td></tr>
-                <tr><td>26</td><td>Francesco Camarda</td><td>🇮🇹</td></tr>
-                <tr><td>27</td><td>Ronny Jansen</td><td>🇩🇪</td></tr>
-                <tr><td>28</td><td>Dean Huijsen</td><td>🇪🇸</td></tr>
-                <tr><td>29</td><td>Luka Vuskovic</td><td>🇭🇷</td></tr>
-                <tr><td>30</td><td>Sverre Halseth Nypan</td><td>🇳🇴</td></tr>
-                <tr><td>31</td><td>Chris Rigg</td><td>🇬🇧</td></tr>
-                <tr><td>32</td><td>Finn Jeltsch</td><td>🇩🇪</td></tr>
-                <tr><td>33</td><td>Lennart Karl</td><td>🇩🇪</td></tr>
-                <tr><td>34</td><td>Try Nyoni</td><td>🇬🇧</td></tr>
-                <tr><td>35</td><td>Adrián Liso</td><td>🇪🇸</td></tr>
-                <tr><td>36</td><td>Esmir Bajraktarevic</td><td>🇧🇦</td></tr>
-                <tr><td>38</td><td>Simon Straudi</td><td>🇮🇹</td></tr>
-                <tr><td>39</td><td>Bruno Durdov</td><td>🇭🇷</td></tr>
-                <tr><td>40</td><td>Kees Smit</td><td>🇳🇱</td></tr>
-                <tr><td>41</td><td>Tim Winter</td><td>🇩🇪</td></tr>
-            </tbody>
-        </table>
-
-        <h3>1. Frauenmannschaft (1. Bundesliga – Trainer: Daris Jean-Baptiste)</h3>
-        <table id="frauenTable">
-            <thead>
-                <tr>
-                    <th onclick="sortTable('frauenTable', 0)">Nummer</th>
-                    <th onclick="sortTable('frauenTable', 1)">Name</th>
-                    <th onclick="sortTable('frauenTable', 2)">Nationalität</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>1</td><td>Zita Meier</td><td>🇩🇪</td></tr>
-                <tr><td>2</td><td>Annaliese Jung</td><td>🇩🇪</td></tr>
-                <tr><td>3</td><td>Ajda Oman</td><td>🇸🇮</td></tr>
-                <tr><td>4</td><td>Ulla Fischer</td><td>🇩🇪</td></tr>
-                <tr><td>5</td><td>Liane König</td><td>🇩🇪</td></tr>
-                <tr><td>6</td><td>Māra Lukovs</td><td>🇱🇻</td></tr>
-                <tr><td>7</td><td>Franziska Neumann</td><td>🇩🇪</td></tr>
-                <tr><td>8</td><td>Luise Lehmann</td><td>🇩🇪</td></tr>
-                <tr><td>9</td><td>Frieda Thomas</td><td>🇩🇪</td></tr>
-                <tr><td>10</td><td>Elisa Müller</td><td>🇨🇭</td></tr>
-                <tr><td>11</td><td>Tabea Bender</td><td>🇩🇪</td></tr>
-                <tr><td>12</td><td>Lisa Siegmund</td><td>🇩🇪</td></tr>
-                <tr><td>13</td><td>Liesel Schröder</td><td>🇩🇪</td></tr>
-                <tr><td>14</td><td>Villborg Hjalmytysdottir</td><td>🇮🇸</td></tr>
-                <tr><td>15</td><td>Gretchen Schuster</td><td>🇩🇪</td></tr>
-                <tr><td>16</td><td>Valentina Meyer</td><td>🇩🇪</td></tr>
-                <tr><td>17</td><td>Agnes Varga</td><td>🇭🇺</td></tr>
-                <tr><td>18</td><td>Yasmine Mayer</td><td>🇩🇪</td></tr>
-                <tr><td>19</td><td>Liesel Zimmermann</td><td>🇩🇪</td></tr>
-                <tr><td>20</td><td>Natascha Neumann</td><td>🇩🇪</td></tr>
-                <tr><td>21</td><td>Roswitha Strasser</td><td>🇦🇹</td></tr>
-                <tr><td>22</td><td>Sarah Vogt</td><td>🇩🇪</td></tr>
-                <tr><td>23</td><td>Amalia Kaiser</td><td>🇩🇪</td></tr>
-            </tbody>
-        </table>
-        <p>Interessiert? Besuche uns auf unserem Trainingsort oder folge uns auf Instagram!</p>
+        <h2>Mannschaften</h2>
+        <h3>Herrenmannschaft</h3>
+        <p>Unsere Herrenmannschaft spielt in der 2. Bundesliga und wird aktuell von Trainer Marijo Mandžukić geleitet. Mit einer Mischung aus erfahrenen Profis und aufstrebenden Talenten zielen wir auf den Aufstieg.</p>
+        <h3>Frauenmannschaft</h3>
+        <p>Die Frauenmannschaft tritt in der Google Pixel Frauen-Bundesliga an und wird von Trainer Daris Jean-Baptiste trainiert. Das Team strebt an, sich im nationalen und internationalen Wettbewerb zu etablieren.</p>
     </section>
 
     <section id="spielplan">
-        <h2>Spielplan (Herren)</h2>
-        <table id="herrenSchedule">
+        <h2>Spielplan & Ergebnisse</h2>
+        <h3>Herrenmannschaft</h3>
+        <table>
             <thead>
                 <tr>
-                    <th onclick="sortTable('herrenSchedule', 0)">Datum</th>
-                    <th onclick="sortTable('herrenSchedule', 1)">Heim/Auswärts</th>
-                    <th onclick="sortTable('herrenSchedule', 2)">Gegner</th>
-                    <th onclick="sortTable('herrenSchedule', 3)">Uhrzeit</th>
-                    <th onclick="sortTable('herrenSchedule', 4)">Ort</th>
+                    <th>Datum</th>
+                    <th>Heim/Auswärts</th>
+                    <th>Gegner</th>
+                    <th>Uhrzeit</th>
+                    <th>Ort</th>
+                    <th>Ergebnis</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td>04.08.2025</td><td>Heim</td><td>1. FC Kaiserslautern</td><td>15:00</td><td>Lanxess Arena</td></tr>
-                <tr><td>11.08.2025</td><td>Auswärts</td><td>Hamburger SV</td><td>15:00</td><td>Volksparkstadion</td></tr>
-                <tr><td>17.08.2025</td><td>Heim</td><td>FC Schalke 04</td><td>15:00</td><td>Lanxess Arena</td></tr>
-                <tr><td>23.08.2025</td><td>Auswärts</td><td>Hertha BSC</td><td>15:00</td><td>Olympiastadion</td></tr>
-                <tr><td>30.08.2025</td><td>Heim</td><td>Preußen Münster</td><td>15:00</td><td>Lanxess Arena</td></tr>
-                <tr><td>14.09.2025</td><td>Auswärts</td><td>1. FC Köln</td><td>15:00</td><td>RheinEnergieSTADION</td></tr>
-                <tr><td>22.09.2025</td><td>Auswärts</td><td>SV Elversberg</td><td>15:00</td><td>URSAPHARM-Arena</td></tr>
-                <tr><td>28.09.2025</td><td>Heim</td><td>Hannover 96</td><td>15:00</td><td>Lanxess Arena</td></tr>
-                <tr><td>05.10.2025</td><td>Auswärts</td><td>SSV Ulm 1846</td><td>15:00</td><td>Donaustadion</td></tr>
-                <tr><td>20.10.2025</td><td>Heim</td><td>Eintracht Braunschweig</td><td>15:00</td><td>Lanxess Arena</td></tr>
-                <tr><td>26.10.2025</td><td>Auswärts</td><td>1. FC Nürnberg</td><td>15:00</td><td>Max-Morlock-Stadion</td></tr>
+                <tr class="win"><td>11.08.2025</td><td>Auswärts</td><td>Hamburger SV</td><td>15:00</td><td>Volksparkstadion</td><td>2:0</td></tr>
+                <tr class="draw"><td>04.08.2025</td><td>Heim</td><td>1. FC Kaiserslautern</td><td>15:00</td><td>Lanxess Arena</td><td>2:2</td></tr>
+                <tr class="win"><td>28.07.2025</td><td>Heim</td><td>Arminia Bielefeld</td><td>15:00</td><td>Lanxess Arena</td><td>4:0</td></tr>
+                <tr class="draw"><td>17.08.2025</td><td>Heim</td><td>FC Schalke 04</td><td>15:00</td><td>Lanxess Arena</td><td>1:1</td></tr>
+                <tr class="loss"><td>23.08.2025</td><td>Auswärts</td><td>Hertha BSC</td><td>15:00</td><td>Olympiastadion</td><td>2:3</td></tr>
+                <tr class="upcoming"><td>30.08.2025</td><td>Heim</td><td>Preußen Münster</td><td>15:00</td><td>Lanxess Arena</td><td>-</td></tr>
+                <tr class="upcoming"><td>14.09.2025</td><td>Auswärts</td><td>1. FC Köln</td><td>15:00</td><td>RheinEnergieSTADION</td><td>-</td></tr>
+                <tr class="upcoming"><td>22.09.2025</td><td>Auswärts</td><td>SV Elversberg</td><td>15:00</td><td>URSAPHARM-Arena</td><td>-</td></tr>
+                <tr class="upcoming"><td>28.09.2025</td><td>Heim</td><td>Hannover 96</td><td>15:00</td><td>Lanxess Arena</td><td>-</td></tr>
+                <tr class="upcoming"><td>05.10.2025</td><td>Auswärts</td><td>SSV Ulm 1846</td><td>15:00</td><td>Donaustadion</td><td>-</td></tr>
+                <tr class="upcoming"><td>20.10.2025</td><td>Heim</td><td>Eintracht Braunschweig</td><td>15:00</td><td>Lanxess Arena</td><td>-</td></tr>
+                <tr class="upcoming"><td>26.10.2025</td><td>Auswärts</td><td>1. FC Nürnberg</td><td>15:00</td><td>Max-Morlock-Stadion</td><td>-</td></tr>
             </tbody>
         </table>
 
-        <h2>Spielplan (Frauen)</h2>
-        <table id="frauenSchedule">
+        <h3>Frauenmannschaft</h3>
+        <table>
             <thead>
                 <tr>
-                    <th onclick="sortTable('frauenSchedule', 0)">Datum</th>
-                    <th onclick="sortTable('frauenSchedule', 1)">Heim/Auswärts</th>
-                    <th onclick="sortTable('frauenSchedule', 2)">Gegner</th>
-                    <th onclick="sortTable('frauenSchedule', 3)">Uhrzeit</th>
-                    <th onclick="sortTable('frauenSchedule', 4)">Ort</th>
-                    <th onclick="sortTable('frauenSchedule', 5)">Wettbewerb</th>
+                    <th>Datum</th>
+                    <th>Heim/Auswärts</th>
+                    <th>Gegner</th>
+                    <th>Uhrzeit</th>
+                    <th>Ort</th>
+                    <th>Wettbewerb</th>
+                    <th>Ergebnis</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td>17.08.2025</td><td>Auswärts</td><td>Leicester City</td><td>15:00</td><td>Chase Stadium</td><td>United Tournament</td></tr>
-                <tr><td>21.08.2025</td><td>Auswärts</td><td>Liverpool FC</td><td>15:00</td><td>Chase Stadium</td><td>United Tournament</td></tr>
-                <tr><td>25.08.2025</td><td>Auswärts</td><td>Sevilla FC</td><td>15:00</td><td>Chase Stadium</td><td>United Tournament</td></tr>
-                <tr><td>30.08.2025</td><td>Heim</td><td>FC Bayern München</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td></tr>
-                <tr><td>15.09.2025</td><td>Auswärts</td><td>Werder Bremen</td><td>15:00</td><td>Weserstadion</td><td>Bundesliga</td></tr>
-                <tr><td>21.09.2025</td><td>Heim</td><td>Eintracht Frankfurt</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td></tr>
-                <tr><td>28.09.2025</td><td>Heim</td><td>RB Leipzig</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td></tr>
-                <tr><td>04.10.2025</td><td>Auswärts</td><td>SC Freiburg</td><td>15:00</td><td>Dreisamstadion</td><td>Bundesliga</td></tr>
-                <tr><td>09.10.2025</td><td>Heim</td><td>Real Madrid</td><td>18:00</td><td>Lanxess Arena</td><td>UEFA Women's Champions League</td></tr>
-                <tr><td>12.10.2025</td><td>Heim</td><td>SGS Essen 1968</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td></tr>
-                <tr><td>16.10.2025</td><td>Heim</td><td>Chelsea Football Club</td><td>18:00</td><td>Lanxess Arena</td><td>UEFA Women's Champions League</td></tr>
-                <tr><td>20.10.2025</td><td>Auswärts</td><td>TSG Hoffenheim</td><td>15:00</td><td>Dietmar-Hopp-Stadion</td><td>Bundesliga</td></tr>
+                <tr class="loss"><td>17.08.2025</td><td>Auswärts</td><td>Leicester City</td><td>15:00</td><td>Chase Stadium</td><td>United Tournament</td><td>1:2</td></tr>
+                <tr class="draw"><td>21.08.2025</td><td>Auswärts</td><td>Liverpool FC</td><td>15:00</td><td>Chase Stadium</td><td>United Tournament</td><td>3:3</td></tr>
+                <tr class="upcoming"><td>25.08.2025</td><td>Auswärts</td><td>Sevilla FC</td><td>15:00</td><td>Chase Stadium</td><td>United Tournament</td><td>-</td></tr>
+                <tr class="upcoming"><td>30.08.2025</td><td>Heim</td><td>FC Bayern München</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td><td>-</td></tr>
+                <tr class="upcoming"><td>15.09.2025</td><td>Auswärts</td><td>Werder Bremen</td><td>15:00</td><td>Weserstadion</td><td>Bundesliga</td><td>-</td></tr>
+                <tr class="upcoming"><td>21.09.2025</td><td>Heim</td><td>Eintracht Frankfurt</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td><td>-</td></tr>
+                <tr class="upcoming"><td>28.09.2025</td><td>Heim</td><td>RB Leipzig</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td><td>-</td></tr>
+                <tr class="upcoming"><td>04.10.2025</td><td>Auswärts</td><td>SC Freiburg</td><td>15:00</td><td>Dreisamstadion</td><td>Bundesliga</td><td>-</td></tr>
+                <tr class="upcoming"><td>09.10.2025</td><td>Heim</td><td>Real Madrid</td><td>18:00</td><td>Lanxess Arena</td><td>UEFA Women's Champions League</td><td>-</td></tr>
+                <tr class="upcoming"><td>12.10.2025</td><td>Heim</td><td>SGS Essen 1968</td><td>15:00</td><td>Lanxess Arena</td><td>Bundesliga</td><td>-</td></tr>
+                <tr class="upcoming"><td>16.10.2025</td><td>Heim</td><td>Chelsea Football Club</td><td>18:00</td><td>Lanxess Arena</td><td>UEFA Women's Champions League</td><td>-</td></tr>
+                <tr class="upcoming"><td>20.10.2025</td><td>Auswärts</td><td>TSG Hoffenheim</td><td>15:00</td><td>Dietmar-Hopp-Stadion</td><td>Bundesliga</td><td>-</td></tr>
             </tbody>
         </table>
     </section>
 
     <footer>
-        <p>&copy; 2025 Kölner Drachen e.V. | <a href="index.html#impressum" style="color: white;">Impressum</a> | <a href="Datenschutz.html" style="color: white;">Datenschutz</a> | <a href="AGB.html" style="color: white;">AGB</a></p>
+        <p>&copy; 2025 Kölner Drachen e.V. | <a href="#impressum" style="color: white;">Impressum</a> | <a href="Datenschutz.html" style="color: white;">Datenschutz</a> | <a href="AGB.html" style="color: white;">AGB</a></p>
     </footer>
-
-    <script>
-        function sortTable(tableId, columnIndex) {
-            const table = document.getElementById(tableId);
-            const tbody = table.getElementsByTagName('tbody')[0];
-            const rows = Array.from(tbody.getElementsByTagName('tr'));
-
-            rows.sort((a, b) => {
-                const aValue = a.cells[columnIndex].textContent.trim();
-                const bValue = b.cells[columnIndex].textContent.trim();
-                return aValue.localeCompare(bValue, undefined, { numeric: true });
-            });
-
-            while (tbody.firstChild) {
-                tbody.removeChild(tbody.firstChild);
-            }
-            rows.forEach(row => tbody.appendChild(row));
-        }
-    </script>
 </body>
 </html>
